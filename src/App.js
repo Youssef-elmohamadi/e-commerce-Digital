@@ -1,4 +1,4 @@
-import { Routes, Route, BrowserRouter as Router } from "react-router-dom";
+import { Routes, Route } from "react-router-dom";
 
 import Navigation from "./components/Navigation";
 import Home from "./components/Home";
@@ -6,12 +6,10 @@ import Home from "./components/Home";
 function App() {
   return (
     <>
-      <Router basename="/e-commerce-Digital">
-        <Navigation />
-        <Routes>
-          <Route path="/" element={<Home />} />
-        </Routes>
-      </Router>
+      <Navigation />
+      <Routes>
+        <Route path="/" element={<Home />} />
+      </Routes>
     </>
   );
 }
