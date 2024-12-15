@@ -1,0 +1,136 @@
+[
+    {
+        "name": "Smartphones",
+        "subcategories": [
+            {"name": "Accessories for iPhone"},
+            {"name": "Accessories for iPad"},
+            {"name": "Accessories for Tablet PC"},
+            {"name": "Tablet PC"}
+        ]
+    },
+    {
+        "name": "Computer & Laptop",
+        "subcategories": [
+            {
+                "name": "Laptop Gaming",
+                "subcategories": [
+                    {"name": "MSI GS76 Stealth"},
+                    {"name": "Razer Blade"},
+                    {"name": "Alienware Area-51m"},
+                    {"name": "Acer Predator Triton 500"},
+                    {"name": "Dell G3 Gaming Laptop"},
+                    {"name": "Lenovo Legion Y7000"}
+                ]
+            },
+            {
+                "name": "Laptop Workstation",
+                "subcategories": [
+                    {"name": "Aesthetics"},
+                    {"name": "Quantel Paintbox"},
+                    {"name": "Lisp Machine"},
+                    {"name": "Dell Precision"},
+                    {"name": "ThinkStation"},
+                    {"name": "Xerox Daybreak"}
+                ]
+            },
+            {
+                "name": "Laptop Build Configuration",
+                "subcategories": [
+                    {"name": "Ram"},
+                    {"name": "HDD"},
+                    {"name": "VGA"},
+                    {"name": "Monitor"},
+                    {"name": "CPU"},
+                    {"name": "Window OS"}
+                ]
+            },
+            {
+                "name": "Accessories for Laptop",
+                "subcategories": [
+                    {"name": "Keyboard"},
+                    {"name": "Mouse"},
+                    {"name": "Software"},
+                    {"name": "VGA Onboard"},
+                    {"name": "Cleaner"},
+                    {"name": "Monitor"},
+                    {"name": "Touch Pad"},
+                    {"name": "Laptop Bags"}
+                ]
+            }
+        ]
+    },
+    {
+        "name": "Computer",
+        "subcategories": [
+            {"name": "Mini Computer"},
+            {"name": "All in One PC"},
+            {"name": "Accessories for Computer"}
+        ]
+    },
+    {
+        "name": "Smart Televisions",
+        "subcategories": [
+            {"name": "Washing Machine"},
+            {"name": "Clothes Washing Machines"},
+            {"name": "Washer & Dryer"},
+            {"name": "Special Laundry Machines"}
+        ]
+    },
+    {
+        "name": "Home Appliances",
+        "subcategories": [
+            {
+                "name": "Refrigerators",
+                "subcategories": [
+                    {"name": "French Door"},
+                    {"name": "Bottom Freezer"},
+                    {"name": "Side-By-Side"},
+                    {"name": "Top Freezer"},
+                    {"name": "Wine Refrigerator"},
+                    {"name": "Compact Refrigerator"}
+                ]
+            },
+            {
+                "name": "Washing Machines",
+                "subcategories": [
+                    {"name": "Clothes Washing Machines"},
+                    {"name": "Washers & Dryers"},
+                    {"name": "Specialty Laundry Machines"},
+                    {"name": "Clothes Dryers"},
+                    {"name": "Stacked Washer & Dryer Units"},
+                    {"name": "Washer Parts & Accessories"}
+                ]
+            },
+            {
+                "name": "Air Conditioners",
+                "subcategories": [
+                    {"name": "Window Air Conditioners"},
+                    {"name": "Portable Air Conditioners"},
+                    {"name": "Room Air Conditioners"},
+                    {"name": "Evaporative Coolers"},
+                    {"name": "Air Conditioner Accessories"},
+                    {"name": "Split System Air Conditioners"},
+                    {"name": "Household Tower Fans"}
+                ]
+            }
+        ]
+    },
+    {
+        "name": "Cameras & Camcorders",
+        "subcategories": [
+            {"name": "Digital Cameras"},
+            {"name": "DSLR Cameras"},
+            {"name": "Camcorders"},
+            {"name": "Camera Accessories"}
+        ]
+    },
+    {
+        "name": "Gaming Consoles",
+        "subcategories": [
+            {"name": "PlayStation"},
+            {"name": "Xbox"},
+            {"name": "Nintendo Switch"},
+            {"name": "Gaming Accessories"}
+]
+}
+]

@@ -1,8 +1,9 @@
 import React, { useEffect, useState } from "react";
 import logo from "../images/logo.svg";
 import { FaSearch } from "react-icons/fa";
-import { collection, getDocs } from "firebase/firestore";
-import { db } from "../FirebaseConfig";
+import { ref, get } from "firebase/database";
+import { database } from "../FirebaseConfig";
+
 import { CiUser } from "react-icons/ci";
 import { Link } from "react-router-dom";
 import { CiHeart } from "react-icons/ci";
@@ -17,20 +18,22 @@ const Header = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const categoriesCollection = collection(db, "categories");
-        const categoriesSnapshot = await getDocs(categoriesCollection);
-        const categoriesList = categoriesSnapshot.docs.map((doc) => ({
-          ...doc.data(),
-        }));
-
-        setCategories(categoriesList);
+        const dbRef = ref(database, "/");
+        const snapshot = await get(dbRef);
+        if (snapshot.exists()) {
+          const data = snapshot.val();
+          setCategories(data);
+        } else {
+          console.log("No data available");
+        }
       } catch (error) {
-        console.error("Error fetching data: ", error);
+        console.error("Error fetching data:", error);
       }
     };
 
     fetchData();
   }, []);
+  console.log(categories);
 
   return (
     <>
@@ -47,30 +50,43 @@ const Header = () => {
             />
             <div className="flex">
               <div className="flex items-center gap-2 text-base text-gray-600">
-                <select className="focus:outline-none text-sm text-gray-600 p-2 w-32 bg-white absolute right-24 ">
+                <select className="focus:outline-none text-sm text-gray-600 p-2 w-32 bg-white absolute right-24">
                   <option value="" className="text-gray-600">
                     {searchTerm}
                   </option>
 
-                  {categories.map((category) => (
-                    <React.Fragment key={category.id}>
-                      {Object.keys(category)
-                        .filter((key) => key !== "id")
-                        .map((key) => (
-                          <optgroup key={key} label={key}>
-                            {Array.isArray(category[key]) &&
-                              category[key].map((item, index) => (
-                                <option
-                                  onClick={() => handleSearch(item)}
-                                  key={index}
-                                  value={item}
-                                >
-                                  {item}
-                                </option>
-                              ))}
-                          </optgroup>
-                        ))}
-                    </React.Fragment>
+                  {categories.map((category, categoryIndex) => (
+                    <optgroup key={categoryIndex} label={category.name}>
+                      {category.subcategories.map(
+                        (subcategory, subcategoryIndex) =>
+                          subcategory.subcategories ? (
+                          
+                            <optgroup
+                              key={subcategoryIndex}
+                              label={`-- ${subcategory.name}`}
+                            >
+                              {subcategory.subcategories.map(
+                                (subSubcategory, subSubIndex) => (
+                                  <option
+                                    key={subSubIndex}
+                                    value={subSubcategory.name}
+                                  >
+                                    {subSubcategory.name}
+                                  </option>
+                                )
+                              )}
+                            </optgroup>
+                          ) : (
+                            
+                            <option
+                              key={subcategoryIndex}
+                              value={subcategory.name}
+                            >
+                              {subcategory.name}
+                            </option>
+                          )
+                      )}
+                    </optgroup>
                   ))}
                 </select>
               </div>
