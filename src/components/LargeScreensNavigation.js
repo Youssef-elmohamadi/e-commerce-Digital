@@ -1,61 +1,18 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useContext } from "react";
+import ShopByCategoriesContext from "./ShopByCategoriesContext";
 import { NavLink, Link } from "react-router-dom";
 import { HiBars3 } from "react-icons/hi2";
 import { FaHome } from "react-icons/fa";
 import { CiSquareMinus, CiSquarePlus } from "react-icons/ci";
 import { MdOutlineKeyboardArrowDown } from "react-icons/md";
-import { BsDisplay } from "react-icons/bs";
-import { ref, get } from "firebase/database";
-import { database } from "../FirebaseConfig";
 import TopBar from "./TopBar";
 import Header from "./Header";
-import { IoHeadsetOutline } from "react-icons/io5";
-import { TbToolsKitchen2 } from "react-icons/tb";
-import { GiTransportationRings } from "react-icons/gi";
-import { BsFillHeartPulseFill } from "react-icons/bs";
-import { FaCameraRetro } from "react-icons/fa";
-import { HiMiniBuildingOffice2 } from "react-icons/hi2";
-import { MdOutlineSportsEsports } from "react-icons/md";
-import { RiGpsFill } from "react-icons/ri";
-import { GiSmartphone } from "react-icons/gi";
-import { FaComputer } from "react-icons/fa6";
 import { RiArrowDropRightLine } from "react-icons/ri";
 const NavigationBar = () => {
+  const { CategoriesData: categories, categoriesApi } = useContext(
+    ShopByCategoriesContext
+  );
   const [showMoreCategories, setShowMoreCategories] = useState(false);
-  const categories = [
-    { icon: <BsDisplay size={20} />, name: "Electronics & Digital" },
-    { icon: <IoHeadsetOutline size={20} />, name: "Accessories" },
-    { icon: <TbToolsKitchen2 size={20} />, name: "Home & kitchen" },
-    { icon: <GiTransportationRings size={20} />, name: "Sports & Outdoors" },
-    { icon: <BsFillHeartPulseFill size={20} />, name: "Health & Beauty" },
-    { icon: <FaCameraRetro size={20} />, name: "Cameras & Photo" },
-    { icon: <HiMiniBuildingOffice2 size={20} />, name: "Office & School" },
-    { icon: <MdOutlineSportsEsports size={20} />, name: "Toys & Kids" },
-    { icon: <RiGpsFill size={20} />, name: "GPS & Navigation" },
-    { icon: <GiSmartphone size={20} />, name: "Mobile Phones" },
-    { icon: <FaComputer size={20} />, name: "Computers & Laptops" },
-  ];
-  const [categoriesApi, setCategoriesApi] = useState([]);
-  useEffect(() => {
-    const fetchData = async () => {
-      try {
-        const dbRef = ref(database, "/");
-        const snapshot = await get(dbRef);
-        if (snapshot.exists()) {
-          const data = snapshot.val();
-          setCategoriesApi(data);
-        } else {
-          console.log("No data available");
-        }
-      } catch (error) {
-        console.error("Error fetching data:", error);
-      }
-    };
-
-    fetchData();
-  }, []);
-  console.log(categoriesApi);
-
   return (
     <>
       <TopBar />
@@ -86,13 +43,10 @@ const NavigationBar = () => {
                       <div className="absolute w-[700px] py-4 px-4 border -top-[200px] left-80 z-50 hidden group-hover/list:block bg-white shadow-lg rounded">
                         {categoriesApi.map((category, index) => {
                           if (category.name === "Computer & Laptop") {
-                            
                             const columns = [[], []];
                             category.subcategories.forEach((subCategory, i) => {
-                              columns[i % 2].push(subCategory); 
+                              columns[i % 2].push(subCategory);
                             });
-
-
                             return (
                               <div className="flex gap-4">
                                 {columns.map((column, colIndex) => (

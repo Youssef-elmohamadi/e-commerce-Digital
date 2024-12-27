@@ -1,9 +1,7 @@
-import React, { useEffect, useState } from "react";
+import React, { useState, useContext } from "react";
+import ShopByCategoriesContext from "./ShopByCategoriesContext";
 import logo from "../images/logo.svg";
 import { FaSearch } from "react-icons/fa";
-import { ref, get } from "firebase/database";
-import { database } from "../FirebaseConfig";
-
 import { CiUser } from "react-icons/ci";
 import { Link } from "react-router-dom";
 import { CiHeart } from "react-icons/ci";
@@ -11,30 +9,10 @@ import { IoCartOutline } from "react-icons/io5";
 
 const Header = () => {
   const [searchTerm, setSearchTerm] = useState("All Categories");
-  const [categories, setCategories] = useState([]);
   function handleSearch(item) {
     setSearchTerm(item);
   }
-  useEffect(() => {
-    const fetchData = async () => {
-      try {
-        const dbRef = ref(database, "/");
-        const snapshot = await get(dbRef);
-        if (snapshot.exists()) {
-          const data = snapshot.val();
-          setCategories(data);
-        } else {
-          console.log("No data available");
-        }
-      } catch (error) {
-        console.error("Error fetching data:", error);
-      }
-    };
-
-    fetchData();
-  }, []);
-  console.log(categories);
-
+  const { categoriesApi: categories } = useContext(ShopByCategoriesContext);
   return (
     <>
       <div className="flex items-center justify-around  gap-5 w-full  bg-[#121212] py-4 px-3 ">
@@ -60,7 +38,6 @@ const Header = () => {
                       {category.subcategories.map(
                         (subcategory, subcategoryIndex) =>
                           subcategory.subcategories ? (
-                          
                             <optgroup
                               key={subcategoryIndex}
                               label={`-- ${subcategory.name}`}
@@ -77,7 +54,6 @@ const Header = () => {
                               )}
                             </optgroup>
                           ) : (
-                            
                             <option
                               key={subcategoryIndex}
                               value={subcategory.name}

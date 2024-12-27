@@ -1,0 +1,510 @@
+{
+   "products": [
+        {
+          "id": 1,
+          "sku": "SKU001",
+          "title": "Smartphone X",
+          "description": "High-performance smartphone with a sleek design and advanced features.",
+          "price": 699.99,
+          "rating": 4.5,
+          "category": "Technology",
+          "classification": "Trending",
+          "in_stock": true,
+          "image": "https://res.cloudinary.com/dggqefzwr/image/upload/v1734705275/7_bwuhyp.jpg"
+        },
+        {
+          "id": 2,
+          "sku": "SKU002",
+          "title": "4K TV",
+          "description": "Stunning visuals with 4K resolution and smart features.",
+          "price": 1199.99,
+          "rating": 4.9,
+          "category": "Electronics",
+          "classification": "Top Sales",
+          "in_stock": true,
+          "image": "https://res.cloudinary.com/dggqefzwr/image/upload/v1734705287/cat-4_as13rm.png"
+        },
+        {
+          "id": 3,
+          "sku": "SKU003",
+          "title": "Laptop Pro",
+          "description": "Powerful laptop for professionals with advanced performance.",
+          "price": 1499.99,
+          "rating": 4.6,
+          "category": "Technology",
+          "classification": "New",
+          "in_stock": false,
+          "image": "https://res.cloudinary.com/dggqefzwr/image/upload/v1734705275/6_1_1_wziinn.jpg"
+        },
+        {
+          "id": 4,
+          "sku": "SKU004",
+          "title": "Smart Refrigerator",
+          "description": "Energy-efficient refrigerator with smart cooling technology.",
+          "price": 899.99,
+          "rating": 4.7,
+          "category": "Appliances",
+          "classification": "Trending",
+          "in_stock": true,
+          "image": "https://res.cloudinary.com/dggqefzwr/image/upload/v1734705264/2_1_dlte7a.jpg"
+        },
+        {
+          "id": 5,
+          "sku": "SKU005",
+          "title": "Wireless Earbuds",
+          "description": "High-quality sound with noise cancellation.",
+          "price": 199.99,
+          "rating": 4.4,
+          "category": "Accessories",
+          "classification": "Top Sales",
+          "in_stock": true,
+          "image": "https://res.cloudinary.com/dggqefzwr/image/upload/v1734705266/4_6_ypfvhp.jpg"
+        },
+        {
+          "id": 6,
+          "sku": "SKU006",
+          "title": "Gaming Console Z",
+          "description": "Next-gen gaming console with ultra-realistic graphics and fast performance.",
+          "price": 499.99,
+          "rating": 4.9,
+          "category": "Gaming",
+          "classification": "New",
+          "in_stock": true,
+          "image": "https://res.cloudinary.com/dggqefzwr/image/upload/v1734705299/l-11_sk1poc.jpg"
+        },
+        {
+          "id": 7,
+          "sku": "SKU007",
+          "title": "Smartwatch Ultra",
+          "description": "Stylish smartwatch with fitness tracking and long battery life.",
+          "price": 249.99,
+          "rating": 4.3,
+          "category": "Accessories",
+          "classification": "Trending",
+          "in_stock": true,
+          "image": "https://res.cloudinary.com/dggqefzwr/image/upload/v1734705287/cat11_ncifpa.png"
+        },
+        {
+          "id": 8,
+          "sku": "SKU008",
+          "title": "Air Purifier Plus",
+          "description": "Advanced air purifier with HEPA filtration for clean air.",
+          "price": 299.99,
+          "rating": 4.7,
+          "category": "Appliances",
+          "classification": "Top Sales",
+          "in_stock": false,
+          "image": "https://res.cloudinary.com/dggqefzwr/image/upload/v1734705285/cat-5_ktkrdx.png"
+        },
+        {
+          "id": 9,
+          "sku": "SKU009",
+          "title": "Tablet Max",
+          "description": "Lightweight tablet with a high-resolution display and powerful processor.",
+          "price": 599.99,
+          "rating": 4.5,
+          "category": "Technology",
+          "classification": "New",
+          "in_stock": true,
+          "image": "https://example.com/images/tablet-max.jpg"
+        },
+        {
+          "id": 10,
+          "sku": "SKU010",
+          "title": "Electric Scooter",
+          "description": "Eco-friendly electric scooter with a sleek design and long-range battery.",
+          "price": 799.99,
+          "rating": 4.6,
+          "category": "Transportation",
+          "classification": "Trending",
+          "in_stock": true,
+          "image": "https://res.cloudinary.com/dggqefzwr/image/upload/v1734705285/cat-6_avfxew.png"
+        },
+        {
+          "id": 11,
+          "sku": "SKU011",
+          "title": "Coffee Maker Plus",
+          "description": "Programmable coffee maker with a built-in grinder.",
+          "price": 129.99,
+          "rating": 4.4,
+          "category": "Appliances",
+          "classification": "Top Sales",
+          "in_stock": true,
+          "image": "https://res.cloudinary.com/dggqefzwr/image/upload/v1734705251/15_2_ne9hny.jpg"
+        },
+        {
+          "id": 12,
+          "sku": "SKU012",
+          "title": "Gaming Headset Pro",
+          "description": "Immersive sound quality with noise-cancelling microphone.",
+          "price": 149.99,
+          "rating": 4.7,
+          "category": "Gaming",
+          "classification": "Trending",
+          "in_stock": true,
+          "image": "https://res.cloudinary.com/dggqefzwr/image/upload/v1734705251/1_u6u9ma.jpg"
+        },
+        {
+          "id": 13,
+          "sku": "SKU013",
+          "title": "Digital Camera X",
+          "description": "High-resolution camera with advanced zoom and 4K video recording.",
+          "price": 999.99,
+          "rating": 4.6,
+          "category": "Photography",
+          "classification": "New",
+          "in_stock": false,
+          "image": "https://res.cloudinary.com/dggqefzwr/image/upload/v1734705265/4_3_ik2wij.jpg"
+        },
+        {
+          "id": 14,
+          "sku": "SKU014",
+          "title": "Bluetooth Speaker Pro",
+          "description": "Portable speaker with deep bass and long battery life.",
+          "price": 89.99,
+          "rating": 4.5,
+          "category": "Audio",
+          "classification": "Top Sales",
+          "in_stock": true,
+          "image": "https://res.cloudinary.com/dggqefzwr/image/upload/v1734705252/19_1_1_j2rnxl.jpg"
+        },
+        {
+          "id": 15,
+          "sku": "SKU015",
+          "title": "Fitness Tracker Max",
+          "description": "Advanced fitness tracker with heart rate monitor and GPS.",
+          "price": 179.99,
+          "rating": 4.4,
+          "category": "Accessories",
+          "classification": "Trending",
+          "in_stock": true,
+          "image": "https://res.cloudinary.com/dggqefzwr/image/upload/v1734705252/14_1_lfvg0c.jpg"
+        },
+        {
+          "id": 16,
+          "sku": "SKU016",
+          "title": "Robot Vacuum",
+          "description": "Smart robot vacuum with advanced cleaning modes.",
+          "price": 349.99,
+          "rating": 4.8,
+          "category": "Appliances",
+          "classification": "Top Sales",
+          "in_stock": true,
+          "image": "https://res.cloudinary.com/dggqefzwr/image/upload/v1734705252/14_1_lfvg0c.jpg"
+        },
+        {
+          "id": 17,
+          "sku": "SKU017",
+          "title": "Electric Kettle",
+          "description": "Fast-boiling electric kettle with temperature control.",
+          "price": 59.99,
+          "rating": 4.5,
+          "category": "Appliances",
+          "classification": "New",
+          "in_stock": true,
+          "image": "https://res.cloudinary.com/dggqefzwr/image/upload/v1734705268/28_cq5d10.jpg"
+        },
+        {
+          "id": 18,
+          "sku": "SKU018",
+          "title": "Drone X",
+          "description": "Compact drone with HD camera and long battery life.",
+          "price": 699.99,
+          "rating": 4.6,
+          "category": "Technology",
+          "classification": "Trending",
+          "in_stock": true,
+          "image": "https://example.com/images/drone-x.jpg"
+        },
+        {
+          "id": 19,
+          "sku": "SKU019",
+          "title": "Smart Light Bulbs",
+          "description": "Energy-efficient smart bulbs with app control.",
+          "price": 49.99,
+          "rating": 4.4,
+          "category": "Home",
+          "classification": "Top Sales",
+          "in_stock": true,
+          "image": "https://res.cloudinary.com/dggqefzwr/image/upload/v1734705276/8_2_pd2ngi.jpg"
+        },
+        {
+          "id": 20,
+          "sku": "SKU020",
+          "title": "Portable Power Bank",
+          "description": "High-capacity power bank with fast charging support.",
+          "price": 39.99,
+          "rating": 4.7,
+          "category": "Accessories",
+          "classification": "Trending",
+          "in_stock": false,
+          "image": "https://res.cloudinary.com/dggqefzwr/image/upload/v1734705255/21_zw5kzq.jpg"
+        }
+    ],
+
+    "categories":[
+        {
+          "name": "Smartphones",
+          "subcategories": [
+            {
+              "name": "Accessories for iPhone"
+            },
+            {
+              "name": "Accessories for iPad"
+            },
+            {
+              "name": "Accessories for Tablet PC"
+            },
+            {
+              "name": "Tablet PC"
+            }
+          ]
+        },
+        {
+          "name": "Computer & Laptop",
+          "subcategories": [
+            {
+              "name": "Laptop Gaming",
+              "subcategories": [
+                {
+                  "name": "MSI GS76 Stealth"
+                },
+                {
+                  "name": "Razer Blade"
+                },
+                {
+                  "name": "Alienware Area-51m"
+                },
+                {
+                  "name": "Acer Predator Triton 500"
+                },
+                {
+                  "name": "Dell G3 Gaming Laptop"
+                },
+                {
+                  "name": "Lenovo Legion Y7000"
+                }
+              ]
+            },
+            {
+              "name": "Laptop Workstation",
+              "subcategories": [
+                {
+                  "name": "Aesthetics"
+                },
+                {
+                  "name": "Quantel Paintbox"
+                },
+                {
+                  "name": "Lisp Machine"
+                },
+                {
+                  "name": "Dell Precision"
+                },
+                {
+                  "name": "ThinkStation"
+                },
+                {
+                  "name": "Xerox Daybreak"
+                }
+              ]
+            },
+            {
+              "name": "Laptop Build Configuration",
+              "subcategories": [
+                {
+                  "name": "Ram"
+                },
+                {
+                  "name": "HDD"
+                },
+                {
+                  "name": "VGA"
+                },
+                {
+                  "name": "Monitor"
+                },
+                {
+                  "name": "CPU"
+                },
+                {
+                  "name": "Window OS"
+                }
+              ]
+            },
+            {
+              "name": "Accessories for Laptop",
+              "subcategories": [
+                {
+                  "name": "Keyboard"
+                },
+                {
+                  "name": "Mouse"
+                },
+                {
+                  "name": "Software"
+                },
+                {
+                  "name": "VGA Onboard"
+                },
+                {
+                  "name": "Cleaner"
+                },
+                {
+                  "name": "Monitor"
+                },
+                {
+                  "name": "Touch Pad"
+                },
+                {
+                  "name": "Laptop Bags"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Computer",
+          "subcategories": [
+            {
+              "name": "Mini Computer"
+            },
+            {
+              "name": "All in One PC"
+            },
+            {
+              "name": "Accessories for Computer"
+            }
+          ]
+        },
+        {
+          "name": "Smart Televisions",
+          "subcategories": [
+            {
+              "name": "Washing Machine"
+            },
+            {
+              "name": "Clothes Washing Machines"
+            },
+            {
+              "name": "Washer & Dryer"
+            },
+            {
+              "name": "Special Laundry Machines"
+            }
+          ]
+        },
+        {
+          "name": "Home Appliances",
+          "subcategories": [
+            {
+              "name": "Refrigerators",
+              "subcategories": [
+                {
+                  "name": "French Door"
+                },
+                {
+                  "name": "Bottom Freezer"
+                },
+                {
+                  "name": "Side-By-Side"
+                },
+                {
+                  "name": "Top Freezer"
+                },
+                {
+                  "name": "Wine Refrigerator"
+                },
+                {
+                  "name": "Compact Refrigerator"
+                }
+              ]
+            },
+            {
+              "name": "Washing Machines",
+              "subcategories": [
+                {
+                  "name": "Clothes Washing Machines"
+                },
+                {
+                  "name": "Washers & Dryers"
+                },
+                {
+                  "name": "Specialty Laundry Machines"
+                },
+                {
+                  "name": "Clothes Dryers"
+                },
+                {
+                  "name": "Stacked Washer & Dryer Units"
+                },
+                {
+                  "name": "Washer Parts & Accessories"
+                }
+              ]
+            },
+            {
+              "name": "Air Conditioners",
+              "subcategories": [
+                {
+                  "name": "Window Air Conditioners"
+                },
+                {
+                  "name": "Portable Air Conditioners"
+                },
+                {
+                  "name": "Room Air Conditioners"
+                },
+                {
+                  "name": "Evaporative Coolers"
+                },
+                {
+                  "name": "Air Conditioner Accessories"
+                },
+                {
+                  "name": "Split System Air Conditioners"
+                },
+                {
+                  "name": "Household Tower Fans"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Cameras & Camcorders",
+          "subcategories": [
+            {
+              "name": "Digital Cameras"
+            },
+            {
+              "name": "DSLR Cameras"
+            },
+            {
+              "name": "Camcorders"
+            },
+            {
+              "name": "Camera Accessories"
+            }
+          ]
+        },
+        {
+          "name": "Gaming Consoles",
+          "subcategories": [
+            {
+              "name": "PlayStation"
+            },
+            {
+              "name": "Xbox"
+            },
+            {
+              "name": "Nintendo Switch"
+            },
+            {
+              "name": "Gaming Accessories"
+            }
+          ]
+        }
+      ]
+    
+}
