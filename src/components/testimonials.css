@@ -1,0 +1,14 @@
+.swiper-pagination-bullet {
+    width :15px !important;
+    height :6px !important;
+    border-radius:3px;
+    background-color: gray !important ;
+    border : solid 1px gray;
+    transition : transform 0.3 ease;
+    transform: translateX(-50%);
+}
+.swiper-pagination-bullet-active {
+    background-color: #F3283C !important ;
+    border : solid 2px #F3283C;
+    transform: scale (1.2);
+}

@@ -4,14 +4,29 @@ import ShopByCategoriesContext, {
 } from "./components/ShopByCategoriesContext";
 import Navigation from "./components/Navigation";
 import Home from "./components/Home";
-import NewArrivals from "./components/NewArrivals";
+import Signup from "./components/Signup";
 
 function App() {
   return (
     <ShopByCategoriesProvider>
       <Navigation />
       <Routes>
-        <Route path="/" element={<><Home /> <NewArrivals /></>} />
+        <Route
+          path="/"
+          element={
+            <>
+              <Home />
+            </>
+          }
+        />
+        <Route
+          path="/register"
+          element={
+            <>
+              <Signup />
+            </>
+          }
+        />
       </Routes>
     </ShopByCategoriesProvider>
   );

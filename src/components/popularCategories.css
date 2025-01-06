@@ -1,0 +1,71 @@
+.swiper-button-next,
+.swiper-button-prev {
+  position: absolute; 
+  top: 60%; 
+  transform: translateY(-50%); 
+  display: flex;
+  justify-content: center; 
+  align-items: center; 
+  color: #000;
+  background-color: white;
+  transition: display 0.3s ease,opacity 0.3s ease ,transform 0.3s ease, background-color 0.3s ease, color 0.3s;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+  width: 50px; 
+  height: 40px; 
+  z-index: 10; 
+}
+
+.swiper-button-next {
+  right: 10px; 
+opacity:0;
+}
+
+.swiper-button-prev {
+  left: 10px; 
+
+  opacity:0;
+}
+
+.swiper-button-next::after,
+.swiper-button-prev::after {
+  content: "";
+}
+
+.swiper-button-next::before,
+.swiper-button-prev::before {
+  content: attr(data-content); 
+  font-size: 25px; 
+  display: block; 
+  text-align: center; 
+}
+
+.swiper-button-next::before {
+  content: "→"; 
+  position: absolute;
+  top:0px;
+}
+
+.swiper-button-prev::before {
+  content: "←"; 
+  position: absolute;
+  top:0px;
+}
+
+.swiper-button-next:hover,
+.swiper-button-prev:hover {
+  transform: translateY(-50%) scale(1.2); 
+  background-color: #F3283C;
+  color: #fff;
+}
+
+.mySwiper:hover .swiper-button-next,
+.mySwiper:hover .swiper-button-prev {
+    display: flex;
+    opacity:1;
+}
+
+.swiper-button-disabled {
+  opacity: 0!important; 
+  pointer-events: none; 
+  transition: opacity 0.3s ease;
+}

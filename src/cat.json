@@ -1,245 +1,245 @@
 {
    "products": [
-        {
-          "id": 1,
-          "sku": "SKU001",
-          "title": "Smartphone X",
-          "description": "High-performance smartphone with a sleek design and advanced features.",
-          "price": 699.99,
-          "rating": 4.5,
-          "category": "Technology",
-          "classification": "Trending",
-          "in_stock": true,
-          "image": "https://res.cloudinary.com/dggqefzwr/image/upload/v1734705275/7_bwuhyp.jpg"
-        },
-        {
-          "id": 2,
-          "sku": "SKU002",
-          "title": "4K TV",
-          "description": "Stunning visuals with 4K resolution and smart features.",
-          "price": 1199.99,
-          "rating": 4.9,
-          "category": "Electronics",
-          "classification": "Top Sales",
-          "in_stock": true,
-          "image": "https://res.cloudinary.com/dggqefzwr/image/upload/v1734705287/cat-4_as13rm.png"
-        },
-        {
-          "id": 3,
-          "sku": "SKU003",
-          "title": "Laptop Pro",
-          "description": "Powerful laptop for professionals with advanced performance.",
-          "price": 1499.99,
-          "rating": 4.6,
-          "category": "Technology",
-          "classification": "New",
-          "in_stock": false,
-          "image": "https://res.cloudinary.com/dggqefzwr/image/upload/v1734705275/6_1_1_wziinn.jpg"
-        },
-        {
-          "id": 4,
-          "sku": "SKU004",
-          "title": "Smart Refrigerator",
-          "description": "Energy-efficient refrigerator with smart cooling technology.",
-          "price": 899.99,
-          "rating": 4.7,
-          "category": "Appliances",
-          "classification": "Trending",
-          "in_stock": true,
-          "image": "https://res.cloudinary.com/dggqefzwr/image/upload/v1734705264/2_1_dlte7a.jpg"
-        },
-        {
-          "id": 5,
-          "sku": "SKU005",
-          "title": "Wireless Earbuds",
-          "description": "High-quality sound with noise cancellation.",
-          "price": 199.99,
-          "rating": 4.4,
-          "category": "Accessories",
-          "classification": "Top Sales",
-          "in_stock": true,
-          "image": "https://res.cloudinary.com/dggqefzwr/image/upload/v1734705266/4_6_ypfvhp.jpg"
-        },
-        {
-          "id": 6,
-          "sku": "SKU006",
-          "title": "Gaming Console Z",
-          "description": "Next-gen gaming console with ultra-realistic graphics and fast performance.",
-          "price": 499.99,
-          "rating": 4.9,
-          "category": "Gaming",
-          "classification": "New",
-          "in_stock": true,
-          "image": "https://res.cloudinary.com/dggqefzwr/image/upload/v1734705299/l-11_sk1poc.jpg"
-        },
-        {
-          "id": 7,
-          "sku": "SKU007",
-          "title": "Smartwatch Ultra",
-          "description": "Stylish smartwatch with fitness tracking and long battery life.",
-          "price": 249.99,
-          "rating": 4.3,
-          "category": "Accessories",
-          "classification": "Trending",
-          "in_stock": true,
-          "image": "https://res.cloudinary.com/dggqefzwr/image/upload/v1734705287/cat11_ncifpa.png"
-        },
-        {
-          "id": 8,
-          "sku": "SKU008",
-          "title": "Air Purifier Plus",
-          "description": "Advanced air purifier with HEPA filtration for clean air.",
-          "price": 299.99,
-          "rating": 4.7,
-          "category": "Appliances",
-          "classification": "Top Sales",
-          "in_stock": false,
-          "image": "https://res.cloudinary.com/dggqefzwr/image/upload/v1734705285/cat-5_ktkrdx.png"
-        },
-        {
-          "id": 9,
-          "sku": "SKU009",
-          "title": "Tablet Max",
-          "description": "Lightweight tablet with a high-resolution display and powerful processor.",
-          "price": 599.99,
-          "rating": 4.5,
-          "category": "Technology",
-          "classification": "New",
-          "in_stock": true,
-          "image": "https://example.com/images/tablet-max.jpg"
-        },
-        {
-          "id": 10,
-          "sku": "SKU010",
-          "title": "Electric Scooter",
-          "description": "Eco-friendly electric scooter with a sleek design and long-range battery.",
-          "price": 799.99,
-          "rating": 4.6,
-          "category": "Transportation",
-          "classification": "Trending",
-          "in_stock": true,
-          "image": "https://res.cloudinary.com/dggqefzwr/image/upload/v1734705285/cat-6_avfxew.png"
-        },
-        {
-          "id": 11,
-          "sku": "SKU011",
-          "title": "Coffee Maker Plus",
-          "description": "Programmable coffee maker with a built-in grinder.",
-          "price": 129.99,
-          "rating": 4.4,
-          "category": "Appliances",
-          "classification": "Top Sales",
-          "in_stock": true,
-          "image": "https://res.cloudinary.com/dggqefzwr/image/upload/v1734705251/15_2_ne9hny.jpg"
-        },
-        {
-          "id": 12,
-          "sku": "SKU012",
-          "title": "Gaming Headset Pro",
-          "description": "Immersive sound quality with noise-cancelling microphone.",
-          "price": 149.99,
-          "rating": 4.7,
-          "category": "Gaming",
-          "classification": "Trending",
-          "in_stock": true,
-          "image": "https://res.cloudinary.com/dggqefzwr/image/upload/v1734705251/1_u6u9ma.jpg"
-        },
-        {
-          "id": 13,
-          "sku": "SKU013",
-          "title": "Digital Camera X",
-          "description": "High-resolution camera with advanced zoom and 4K video recording.",
-          "price": 999.99,
-          "rating": 4.6,
-          "category": "Photography",
-          "classification": "New",
-          "in_stock": false,
-          "image": "https://res.cloudinary.com/dggqefzwr/image/upload/v1734705265/4_3_ik2wij.jpg"
-        },
-        {
-          "id": 14,
-          "sku": "SKU014",
-          "title": "Bluetooth Speaker Pro",
-          "description": "Portable speaker with deep bass and long battery life.",
-          "price": 89.99,
-          "rating": 4.5,
-          "category": "Audio",
-          "classification": "Top Sales",
-          "in_stock": true,
-          "image": "https://res.cloudinary.com/dggqefzwr/image/upload/v1734705252/19_1_1_j2rnxl.jpg"
-        },
-        {
-          "id": 15,
-          "sku": "SKU015",
-          "title": "Fitness Tracker Max",
-          "description": "Advanced fitness tracker with heart rate monitor and GPS.",
-          "price": 179.99,
-          "rating": 4.4,
-          "category": "Accessories",
-          "classification": "Trending",
-          "in_stock": true,
-          "image": "https://res.cloudinary.com/dggqefzwr/image/upload/v1734705252/14_1_lfvg0c.jpg"
-        },
-        {
-          "id": 16,
-          "sku": "SKU016",
-          "title": "Robot Vacuum",
-          "description": "Smart robot vacuum with advanced cleaning modes.",
-          "price": 349.99,
-          "rating": 4.8,
-          "category": "Appliances",
-          "classification": "Top Sales",
-          "in_stock": true,
-          "image": "https://res.cloudinary.com/dggqefzwr/image/upload/v1734705252/14_1_lfvg0c.jpg"
-        },
-        {
-          "id": 17,
-          "sku": "SKU017",
-          "title": "Electric Kettle",
-          "description": "Fast-boiling electric kettle with temperature control.",
-          "price": 59.99,
-          "rating": 4.5,
-          "category": "Appliances",
-          "classification": "New",
-          "in_stock": true,
-          "image": "https://res.cloudinary.com/dggqefzwr/image/upload/v1734705268/28_cq5d10.jpg"
-        },
-        {
-          "id": 18,
-          "sku": "SKU018",
-          "title": "Drone X",
-          "description": "Compact drone with HD camera and long battery life.",
-          "price": 699.99,
-          "rating": 4.6,
-          "category": "Technology",
-          "classification": "Trending",
-          "in_stock": true,
-          "image": "https://example.com/images/drone-x.jpg"
-        },
-        {
-          "id": 19,
-          "sku": "SKU019",
-          "title": "Smart Light Bulbs",
-          "description": "Energy-efficient smart bulbs with app control.",
-          "price": 49.99,
-          "rating": 4.4,
-          "category": "Home",
-          "classification": "Top Sales",
-          "in_stock": true,
-          "image": "https://res.cloudinary.com/dggqefzwr/image/upload/v1734705276/8_2_pd2ngi.jpg"
-        },
-        {
-          "id": 20,
-          "sku": "SKU020",
-          "title": "Portable Power Bank",
-          "description": "High-capacity power bank with fast charging support.",
-          "price": 39.99,
-          "rating": 4.7,
-          "category": "Accessories",
-          "classification": "Trending",
-          "in_stock": false,
-          "image": "https://res.cloudinary.com/dggqefzwr/image/upload/v1734705255/21_zw5kzq.jpg"
-        }
+    {
+      "id": 1,
+      "sku": "SKU001",
+      "title": "Smartphone X",
+      "description": "High-performance smartphone with a sleek design and advanced features.",
+      "price": 699.99,
+      "rating": 4.5,
+      "category": "Technology",
+      "classification": "Trending",
+      "in_stock": true,
+      "image": "https://res.cloudinary.com/dggqefzwr/image/upload/v1734705254/23_2_vpf6vi.jpg"
+    },
+    {
+      "id": 2,
+      "sku": "SKU002",
+      "title": "4K TV",
+      "description": "Stunning visuals with 4K resolution and smart features.",
+      "price": 1199.99,
+      "rating": 4.8,
+      "category": "Electronics",
+      "classification": "Top Sales",
+      "in_stock": true,
+      "image": "https://res.cloudinary.com/dggqefzwr/image/upload/v1734705299/l-11_sk1poc.jpg"
+    },
+    {
+      "id": 3,
+      "sku": "SKU003",
+      "title": "Laptop Pro",
+      "description": "Powerful laptop for professionals with advanced performance.",
+      "price": 1499.99,
+      "rating": 4.6,
+      "category": "Technology",
+      "classification": "New",
+      "in_stock": false,
+      "image": "https://res.cloudinary.com/dggqefzwr/image/upload/v1734705275/6_1_1_wziinn.jpg"
+    },
+    {
+      "id": 4,
+      "sku": "SKU004",
+      "title": "Smart Refrigerator",
+      "description": "Energy-efficient refrigerator with smart cooling technology.",
+      "price": 899.99,
+      "rating": 4.7,
+      "category": "Appliances",
+      "classification": "Trending",
+      "in_stock": true,
+      "image": "https://res.cloudinary.com/dggqefzwr/image/upload/v1734705264/2_1_dlte7a.jpg"
+    },
+    {
+      "id": 5,
+      "sku": "SKU005",
+      "title": "Wireless Earbuds",
+      "description": "High-quality sound with noise cancellation.",
+      "price": 199.99,
+      "rating": 4.4,
+      "category": "Accessories",
+      "classification": "Trending",
+      "in_stock": true,
+      "image": "https://res.cloudinary.com/dggqefzwr/image/upload/v1734705266/4_6_ypfvhp.jpg"
+    },
+    {
+      "id": 6,
+      "sku": "SKU006",
+      "title": "Gaming Console Z",
+      "description": "Next-gen gaming console with ultra-realistic graphics and fast performance.",
+      "price": 499.99,
+      "rating": 4.9,
+      "category": "Gaming",
+      "classification": "New",
+      "in_stock": true,
+      "image": "https://res.cloudinary.com/dggqefzwr/image/upload/v1734705299/l-11_sk1poc.jpg"
+    },
+    {
+      "id": 7,
+      "sku": "SKU007",
+      "title": "Smartwatch Ultra",
+      "description": "Stylish smartwatch with fitness tracking and long battery life.",
+      "price": 249.99,
+      "rating": 4.3,
+      "category": "Accessories",
+      "classification": "Trending",
+      "in_stock": true,
+      "image": "https://res.cloudinary.com/dggqefzwr/image/upload/v1734705251/17_gpaxeo.jpg"
+    },
+    {
+      "id": 8,
+      "sku": "SKU008",
+      "title": "Air Purifier Plus",
+      "description": "Advanced air purifier with HEPA filtration for clean air.",
+      "price": 299.99,
+      "rating": 4.7,
+      "category": "Appliances",
+      "classification": "Trending",
+      "in_stock": false,
+      "image": "https://res.cloudinary.com/dggqefzwr/image/upload/v1734705251/1_u6u9ma.jpg"
+    },
+    {
+      "id": 9,
+      "sku": "SKU009",
+      "title": "Tablet Max",
+      "description": "Lightweight tablet with a high-resolution display and powerful processor.",
+      "price": 599.99,
+      "rating": 4.5,
+      "category": "Technology",
+      "classification": "New",
+      "in_stock": true,
+      "image": "https://res.cloudinary.com/dggqefzwr/image/upload/v1734705256/10_4_p6nepa.jpg"
+    },
+    {
+      "id": 10,
+      "sku": "SKU010",
+      "title": "Electric Scooter",
+      "description": "Eco-friendly electric scooter with a sleek design and long-range battery.",
+      "price": 799.99,
+      "rating": 4.6,
+      "category": "Transportation",
+      "classification": "Trending",
+      "in_stock": true,
+      "image": "https://res.cloudinary.com/dggqefzwr/image/upload/v1734705254/21_1_jwiuya.jpg"
+    },
+    {
+      "id": 11,
+      "sku": "SKU011",
+      "title": "Coffee Maker Plus",
+      "description": "Programmable coffee maker with a built-in grinder.",
+      "price": 129.99,
+      "rating": 4.4,
+      "category": "Appliances",
+      "classification": "Top Sales",
+      "in_stock": true,
+      "image": "https://res.cloudinary.com/dggqefzwr/image/upload/v1734705251/15_2_ne9hny.jpg"
+    },
+    {
+      "id": 12,
+      "sku": "SKU012",
+      "title": "Gaming Headset Pro",
+      "description": "Immersive sound quality with noise-cancelling microphone.",
+      "price": 149.99,
+      "rating": 4.7,
+      "category": "Gaming",
+      "classification": "Trending",
+      "in_stock": true,
+      "image": "https://res.cloudinary.com/dggqefzwr/image/upload/v1734705251/1_u6u9ma.jpg"
+    },
+    {
+      "id": 13,
+      "sku": "SKU013",
+      "title": "Digital Camera X",
+      "description": "High-resolution camera with advanced zoom and 4K video recording.",
+      "price": 999.99,
+      "rating": 4.6,
+      "category": "Photography",
+      "classification": "New",
+      "in_stock": false,
+      "image": "https://res.cloudinary.com/dggqefzwr/image/upload/v1734705265/4_3_ik2wij.jpg"
+    },
+    {
+      "id": 14,
+      "sku": "SKU014",
+      "title": "Bluetooth Speaker Pro",
+      "description": "Portable speaker with deep bass and long battery life.",
+      "price": 89.99,
+      "rating": 4.5,
+      "category": "Audio",
+      "classification": "Top Sales",
+      "in_stock": true,
+      "image": "https://res.cloudinary.com/dggqefzwr/image/upload/v1734705252/19_1_1_j2rnxl.jpg"
+    },
+    {
+      "id": 15,
+      "sku": "SKU015",
+      "title": "Fitness Tracker Max",
+      "description": "Advanced fitness tracker with heart rate monitor and GPS.",
+      "price": 179.99,
+      "rating": 4.4,
+      "category": "Accessories",
+      "classification": "Trending",
+      "in_stock": true,
+      "image": "https://res.cloudinary.com/dggqefzwr/image/upload/v1734705265/3_2_azbn4a.jpg"
+    },
+    {
+      "id": 16,
+      "sku": "SKU016",
+      "title": "Robot Vacuum",
+      "description": "Smart robot vacuum with advanced cleaning modes.",
+      "price": 349.99,
+      "rating": 4.8,
+      "category": "Appliances",
+      "classification": "Top Sales",
+      "in_stock": true,
+      "image": "https://res.cloudinary.com/dggqefzwr/image/upload/v1734705252/14_1_lfvg0c.jpg"
+    },
+    {
+      "id": 17,
+      "sku": "SKU017",
+      "title": "Electric Kettle",
+      "description": "Fast-boiling electric kettle with temperature control.",
+      "price": 59.99,
+      "rating": 4.5,
+      "category": "Appliances",
+      "classification": "New",
+      "in_stock": true,
+      "image": "https://res.cloudinary.com/dggqefzwr/image/upload/v1734705268/28_cq5d10.jpg"
+    },
+    {
+      "id": 18,
+      "sku": "SKU018",
+      "title": "Drone X",
+      "description": "Compact drone with HD camera and long battery life.",
+      "price": 699.99,
+      "rating": 4.6,
+      "category": "Technology",
+      "classification": "Trending",
+      "in_stock": true,
+      "image": "https://res.cloudinary.com/dggqefzwr/image/upload/v1734705265/3_2_1_aw28tu.jpg"
+    },
+    {
+      "id": 19,
+      "sku": "SKU019",
+      "title": "Smart Light Bulbs",
+      "description": "Energy-efficient smart bulbs with app control.",
+      "price": 49.99,
+      "rating": 4.4,
+      "category": "Home",
+      "classification": "Top Sales",
+      "in_stock": true,
+      "image": "https://res.cloudinary.com/dggqefzwr/image/upload/v1734705276/8_2_pd2ngi.jpg"
+    },
+    {
+      "id": 20,
+      "sku": "SKU020",
+      "title": "Portable Power Bank",
+      "description": "High-capacity power bank with fast charging support.",
+      "price": 39.99,
+      "rating": 4.7,
+      "category": "Accessories",
+      "classification": "Trending",
+      "in_stock": false,
+      "image": "https://res.cloudinary.com/dggqefzwr/image/upload/v1734705255/21_zw5kzq.jpg"
+    }
     ],
 
     "categories":[
@@ -505,6 +505,239 @@
             }
           ]
         }
-      ]
-    
+      ],
+      "blogs": [
+    {
+      "id": 1,
+      "title": "Join Millions of Others: Embrace the Digital Era",
+      "author": "John Doe",
+      "published_date": "2024-01-01",
+      "content": "The world is becoming more interconnected than ever. Join millions of people who are harnessing the power of digital tools to transform their daily lives. From smart homes to online learning, the possibilities are endless.",
+      "image_url": "https://res.cloudinary.com/dggqefzwr/image/upload/v1734703778/samples/ecommerce/analog-classic.jpg",
+      "classification": "Trending",
+      "category": "E-commerce"
+    },
+    {
+      "id": 2,
+      "title": "Hang Onto Your Memories: The Power of Digital Archives",
+      "author": "Jane Smith",
+      "published_date": "2024-01-05",
+      "content": "Preserving your memories has never been easier. Learn how to create digital photo albums, back up cherished moments, and ensure they are safe for generations to come.",
+      "image_url": "https://res.cloudinary.com/dggqefzwr/image/upload/v1734703779/samples/animals/reindeer.jpg",
+      "classification": "New",
+      "category": "Projects"
+    },
+    {
+      "id": 3,
+      "title": "Choose the Perfect Design: Tips for a Stunning Look",
+      "author": "Emily Clarke",
+      "published_date": "2024-01-10",
+      "content": "Whether you're designing a website, renovating a space, or selecting a new outfit, the right design can make all the difference. Discover tips to pick designs that reflect your personality and style.",
+      "image_url": "https://res.cloudinary.com/dggqefzwr/image/upload/v1734705260/1_rbuygd.png",
+      "classification": "Editor’s Pick",
+      "category": "Marketing Tech"
+    },
+    {
+      "id": 4,
+      "title": "Sensor with High Impact Resistance: A Game Changer",
+      "author": "Michael Brown",
+      "published_date": "2024-01-15",
+      "content": "Advanced sensors are redefining industries with their durability and precision. Learn how impact-resistant sensors are being used in automotive, healthcare, and more.",
+      "image_url": "https://res.cloudinary.com/dggqefzwr/image/upload/v1734705266/2_eszvee.png",
+      "classification": "Featured",
+      "category": "Events"
+    },
+    {
+      "id": 5,
+      "title": "For Those Who Wish to Seriously Update Their Tech",
+      "author": "Sophia Wilson",
+      "published_date": "2024-01-20",
+      "content": "Thinking about upgrading your gadgets? Explore the latest tech trends and products that can revolutionize how you work, play, and connect.",
+      "image_url": "https://res.cloudinary.com/dggqefzwr/image/upload/v1734705288/8_oldblf.png",
+      "classification": "Hot",
+      "category": "E-commerce"
+    },
+    {
+      "id": 6,
+      "title": "What Are Some Good Electronics for 2024?",
+      "author": "Chris Johnson",
+      "published_date": "2024-01-25",
+      "content": "Looking to invest in new electronics? From smart TVs to noise-cancelling headphones, here’s a list of must-have gadgets for the year.",
+      "image_url": "https://res.cloudinary.com/dggqefzwr/image/upload/v1734703788/samples/cup-on-a-table.jpg",
+      "classification": "Trending",
+      "category": "Search Part"
+    },
+    {
+      "id": 7,
+      "title": "Standard Blog Post Example: How to Write Engaging Content",
+      "author": "Alex Green",
+      "published_date": "2024-01-30",
+      "content": "Writing a blog post can be daunting, but it doesn't have to be. Learn the key elements of a successful post, including headlines, visuals, and storytelling techniques.",
+      "image_url": "https://res.cloudinary.com/dggqefzwr/image/upload/v1735549756/5_uvwglh.png",
+      "classification": "Popular",
+      "category": "Marketing Tech"
+    },
+    {
+      "id": 8,
+      "title": "Top 5 E-commerce Platforms to Watch in 2024",
+      "author": "Nora Adams",
+      "published_date": "2024-02-01",
+      "content": "E-commerce is growing at an unprecedented pace. Discover the top platforms that are leading the way in 2024, from Shopify to emerging players.",
+      "image_url": "https://res.cloudinary.com/dggqefzwr/image/upload/v1735549762/6_j469wz.png",
+      "classification": "Trending",
+      "category": "E-commerce"
+    },
+    {
+      "id": 9,
+      "title": "Mastering Marketing Automation in 2024",
+      "author": "David Hall",
+      "published_date": "2024-02-05",
+      "content": "Marketing automation is no longer optional. Learn the best tools and strategies to streamline your campaigns and maximize ROI this year.",
+      "image_url": "https://res.cloudinary.com/dggqefzwr/image/upload/v1735549773/10_lnt93j.png",
+      "classification": "Editor’s Pick",
+      "category": "Marketing Tech"
+    },
+    {
+      "id": 10,
+      "title": "Creating Engaging Virtual Events: Tips and Tools",
+      "author": "Emma Lee",
+      "published_date": "2024-02-10",
+      "content": "Virtual events are here to stay. Learn how to create experiences that captivate your audience and leave a lasting impression.",
+      "image_url": "https://res.cloudinary.com/dggqefzwr/image/upload/v1735549765/9_r7f3qu.png",
+      "classification": "New",
+      "category": "Events"
+    }
+  ],
+  "testimonials": [
+    {
+      "id": 1,
+      "name": "Sophia Johnson",
+      "role": "CEO, Tech Solutions Inc.",
+      "testimonial": "Using this platform has transformed how our team collaborates. The user-friendly interface and powerful tools have made a significant impact on our productivity.",
+      "image_url": "https://res.cloudinary.com/dggqefzwr/image/upload/v1735550058/testi1_mnv4mi.jpg",
+      "rating": 5,
+      "category": "Technology"
+    },
+    {
+      "id": 2,
+      "name": "Liam Brown",
+      "role": "Freelance Designer",
+      "testimonial": "I’ve never felt more creative! The design tools offered here are top-notch, helping me bring my ideas to life effortlessly.",
+      "image_url": "https://res.cloudinary.com/dggqefzwr/image/upload/v1735550060/testi2_vve1wx.jpg",
+      "rating": 4.8,
+      "category": "Design"
+    },
+    {
+      "id": 3,
+      "name": "Olivia Davis",
+      "role": "Marketing Director, Bright Ideas Co.",
+      "testimonial": "The marketing automation features have revolutionized how we manage campaigns. The insights we get are invaluable for decision-making.",
+      "image_url": "https://res.cloudinary.com/dggqefzwr/image/upload/v1735550063/testi3_iou5sy.jpg",
+      "rating": 4.9,
+      "category": "Marketing"
+    },
+    {
+      "id": 4,
+      "name": "Noah Wilson",
+      "role": "Event Organizer, Global Meetups",
+      "testimonial": "Our virtual events have reached new heights with the support we received. The platform is intuitive and reliable, making event management seamless.",
+      "image_url": "https://res.cloudinary.com/dggqefzwr/image/upload/v1735552461/pexels-ono-kosuki-5648100_p7cehz.jpg",
+      "rating": 5,
+      "category": "Events"
+    },
+    {
+      "id": 5,
+      "name": "Emma White",
+      "role": "Entrepreneur",
+      "testimonial": "This platform has been a game-changer for my e-commerce business. The tools are easy to use and have helped me scale efficiently.",
+      "image_url": "https://res.cloudinary.com/dggqefzwr/image/upload/v1735552460/pexels-katerina-holmes-5905497_ar7a5c.jpg",
+      "rating": 4.7,
+      "category": "E-commerce"
+    },
+    {
+      "id": 6,
+      "name": "James Martinez",
+      "role": "Software Developer",
+      "testimonial": "As a developer, I appreciate the flexibility and advanced features this platform offers. It’s a dream for anyone looking to build scalable solutions.",
+      "image_url": "https://res.cloudinary.com/dggqefzwr/image/upload/v1735552455/pexels-gabby-k-6999225_waiycx.jpg",
+      "rating": 4.8,
+      "category": "Technology"
+    },
+    {
+      "id": 7,
+      "name": "Charlotte Taylor",
+      "role": "Content Creator",
+      "testimonial": "The creative tools provided have helped me elevate my content to a professional level. My audience has noticed the difference!",
+      "image_url": "https://res.cloudinary.com/dggqefzwr/image/upload/v1735552440/pexels-bave-pictures-64453798-18003195_cboctc.jpg",
+      "rating": 4.9,
+      "category": "Content Creation"
+    },
+    {
+      "id": 8,
+      "name": "Ethan Harris",
+      "role": "Product Manager",
+      "testimonial": "Managing our projects has become so much easier. The reporting tools and integrations have saved us countless hours.",
+      "image_url": "https://res.cloudinary.com/dggqefzwr/image/upload/v1735552408/pexels-kampus-5920775_vobrcz.jpg",
+      "rating": 5,
+      "category": "Project Management"
+    }
+  ],
+  "popular_categories": [
+      {
+        "id": 1,
+        "name": "Men's Watches",
+        "description": "Stylish and classic watches for men.",
+        "image": "https://res.cloudinary.com/dggqefzwr/image/upload/v1734705285/cat-6_avfxew.png",
+        "available_devices": 120
+      },
+      {
+        "id": 2,
+        "name": "All Accessories",
+        "description": "A wide range of accessories for daily use.",
+        "image": "https://res.cloudinary.com/dggqefzwr/image/upload/v1734705288/cat-7_1_ual8w6.png",
+        "available_devices": 450
+      },
+      {
+        "id": 3,
+        "name": "Smart Watches",
+        "description": "Modern smartwatches with advanced features.",
+        "image": "https://res.cloudinary.com/dggqefzwr/image/upload/v1734705287/cat11_ncifpa.png",
+        "available_devices": 75
+      },
+      {
+        "id": 4,
+        "name": "Audio Theaters",
+        "description": "High-quality audio systems for an immersive experience.",
+        "image": "https://res.cloudinary.com/dggqefzwr/image/upload/v1734705284/cat-1_ypdqfx.png",
+        "available_devices": 30
+      },
+      {
+        "id": 5,
+        "name": "Smart Televisions",
+        "description": "Smart TVs with 4K resolution and smart features.",
+        "image": "https://res.cloudinary.com/dggqefzwr/image/upload/v1734705287/cat-4_as13rm.png",
+        "available_devices": 50
+      },
+      {
+        "id": 6,
+        "name": "Smartphones",
+        "description": "Latest smartphones with cutting-edge technology.",
+        "image": "https://res.cloudinary.com/dggqefzwr/image/upload/v1734705284/cat-1_ypdqfx.png",
+        "available_devices": 300
+      },
+      {
+        "id": 7,
+        "name": "Digital Cameras",
+        "description": "Professional and personal digital cameras.",
+        "image": "https://res.cloudinary.com/dggqefzwr/image/upload/v1734705289/cat-7_sev1ed.png",
+        "available_devices": 85
+      },
+      {
+        "id": 8,
+        "name": "Computers & Laptops",
+        "description": "High-performance computers and laptops for all needs.",
+        "image": "https://res.cloudinary.com/dggqefzwr/image/upload/v1734705284/cat-2_gjv9yh.png",
+        "available_devices":200
+    }
+  ]
 }

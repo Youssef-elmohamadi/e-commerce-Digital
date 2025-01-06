@@ -2,12 +2,15 @@
 import { initializeApp } from "firebase/app";
 import { getFirestore } from "firebase/firestore";
 import { getDatabase } from "firebase/database";
-// Firebase configuration
+import { getAuth } from "firebase/auth";
 const firebaseConfig = {
-  apiKey: "AIzaSyBmUGg3PMUuDHe8xh42lTEprF3fO-cA4gA",
-  authDomain: "YOUR_PROJECT_ID.firebaseapp.com",
-  projectId: "youssef-9fe8a",
+  apiKey: "AIzaSyANyOQjTCb2tV4wG9LGfU9CyOtw5HEcsdk",
+  authDomain: "youssef-9fe8a.firebaseapp.com",
   databaseURL: "https://youssef-9fe8a-default-rtdb.firebaseio.com",
+  projectId: "youssef-9fe8a",
+  storageBucket: "youssef-9fe8a.firebasestorage.app",
+  messagingSenderId: "525818985126",
+  appId: "1:525818985126:web:1b557a61978447f9a81267",
 };
 
 // Initialize Firebase
@@ -18,3 +21,6 @@ export const db = getFirestore(app);
 
 // Initialize Realtime Database
 export const database = getDatabase(app);
+
+//initialize auth
+const auth = getAuth(app);

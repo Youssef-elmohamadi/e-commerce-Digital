@@ -32,6 +32,9 @@ const CategoriesData = [
 export const ShopByCategoriesProvider = ({ children }) => {
   const [categoriesApi, setCategoriesApi] = useState([]);
   const [productsApi, setProductsApi] = useState([]);
+  const [blogs, setBlogs] = useState([]);
+  const [popular_categories, setPopular_categories] = useState([]);
+  const [bestSellers, setBestSellers] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
 
@@ -44,10 +47,11 @@ export const ShopByCategoriesProvider = ({ children }) => {
         const snapshot = await get(dbRef);
         if (snapshot.exists()) {
           const data = snapshot.val();
-          setCategoriesApi(data.categories || []); // تحقق من وجود categories
-          setProductsApi(data.products || []); // تحقق من وجود categories
-        } else {
-          
+          setCategoriesApi(data.categories || []);
+          setProductsApi(data.products || []);
+          setBlogs(data.blogs || []);
+          setPopular_categories(data.popular_categories || []);
+          setBestSellers (data.bes)
         }
       } catch (error) {
         console.error("Error fetching data:", error);
@@ -62,7 +66,15 @@ export const ShopByCategoriesProvider = ({ children }) => {
 
   return (
     <ShopByCategoriesContext.Provider
-      value={{ CategoriesData, categoriesApi, loading, error, productsApi }}
+      value={{
+        CategoriesData,
+        categoriesApi,
+        loading,
+        error,
+        productsApi,
+        blogs,
+        popular_categories,
+      }}
     >
       {children}
     </ShopByCategoriesContext.Provider>
