@@ -1,12 +1,11 @@
 {
   "files": {
-    "main.css": "/e-commerce-Digital/static/css/main.262a9778.css",
-    "main.js": "/e-commerce-Digital/static/js/main.ca2f5412.js",
+    "main.css": "/e-commerce-Digital/static/css/main.9f486cda.css",
+    "main.js": "/e-commerce-Digital/static/js/main.4e46ef26.js",
     "static/media/slider3.jpg": "/e-commerce-Digital/static/media/slider3.e441476e2732aa4e7483.jpg",
     "static/media/slider1.jpg": "/e-commerce-Digital/static/media/slider1.2505600d0450a53be186.jpg",
     "static/media/slider2.jpg": "/e-commerce-Digital/static/media/slider2.e7d525e936b0a99a3293.jpg",
     "static/media/banner.jpg": "/e-commerce-Digital/static/media/banner.5cb8a091b0e5c8bcc196.jpg",
-    "static/media/laptop.jpg": "/e-commerce-Digital/static/media/laptop.618ca91ff05d9bd33683.jpg",
     "static/media/item-3.jpg": "/e-commerce-Digital/static/media/item-3.41c41e1da1384c817c74.jpg",
     "static/media/testi1.jpg": "/e-commerce-Digital/static/media/testi1.56e7539f4017e5849adc.jpg",
     "static/media/testi3.jpg": "/e-commerce-Digital/static/media/testi3.e8e4d4b9904e8d66af8f.jpg",
@@ -16,11 +15,11 @@
     "static/media/payment-footer.png": "/e-commerce-Digital/static/media/payment-footer.20dc4af89de93fc47b9c.png",
     "static/media/logo.svg": "/e-commerce-Digital/static/media/logo.72eaea4befe03437a242d2b47bfa48ea.svg",
     "index.html": "/e-commerce-Digital/index.html",
-    "main.262a9778.css.map": "/e-commerce-Digital/static/css/main.262a9778.css.map",
-    "main.ca2f5412.js.map": "/e-commerce-Digital/static/js/main.ca2f5412.js.map"
+    "main.9f486cda.css.map": "/e-commerce-Digital/static/css/main.9f486cda.css.map",
+    "main.4e46ef26.js.map": "/e-commerce-Digital/static/js/main.4e46ef26.js.map"
   },
   "entrypoints": [
-    "static/css/main.262a9778.css",
-    "static/js/main.ca2f5412.js"
+    "static/css/main.9f486cda.css",
+    "static/js/main.4e46ef26.js"
   ]
 }
