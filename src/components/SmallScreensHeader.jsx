@@ -13,6 +13,8 @@ import { motion } from "framer-motion";
 import { NavLink, Link } from "react-router-dom";
 import { MdOutlineKeyboardArrowUp } from "react-icons/md";
 import { MdOutlineKeyboardArrowDown } from "react-icons/md";
+import CartPopup from "./CartPopup";
+import { useSelector } from "react-redux";
 const SmallScreensHeader = () => {
   const [showSideBar, setShowSideBar] = useState(false);
   const [activeTab, setActiveTab] = useState("menu"); // Keeps track of the active tab (Menu, Account, Setting)
@@ -21,21 +23,34 @@ const SmallScreensHeader = () => {
   const { CategoriesData: categories, categoriesApi } = useContext(
     ShopByCategoriesContext
   );
+  const [showCart, setShowCart] = useState(false);
+
+  const toggleCart = () => {
+    setShowCart((prev) => !prev);
+  };
 
   // Close sidebar when clicking outside
   useEffect(() => {
-    const handleOutsideClick = () => {
-      setShowSideBar(false);
+    const handleOutsideClick = (e) => {
+      // Check if the click is outside the sidebar or cart
+      if (
+        !e.target.closest("#mobile-menu") &&
+        !e.target.closest("#cart-popup") &&
+        !e.target.closest(".cart-button")
+      ) {
+        setShowSideBar(false);
+        setShowCart(false);
+      }
     };
 
-    if (showSideBar) {
+    if (showSideBar || showCart) {
       window.addEventListener("click", handleOutsideClick);
     }
 
     return () => {
       window.removeEventListener("click", handleOutsideClick);
     };
-  }, [showSideBar]);
+  }, [showSideBar, showCart]);
 
   const toggleMoreFeatures = () => {
     setShowMoreFeatures((prev) => !prev);
@@ -67,8 +82,18 @@ const SmallScreensHeader = () => {
         <div>
           <img src={logo} alt="Logo" width={120} />
         </div>
-        <div>
-          <FiShoppingBag className="text-2xl text-white" size={35} />
+        <div className="flex items-center gap-2 relative">
+          <FiShoppingBag
+            className="text-2xl text-white cart-button"
+            size={35}
+            onClick={toggleCart}
+          />
+          <span className="text-white font-semibold bg-red-400 px-2 py-1 rounded">
+            {useSelector((state) => state.cart.totalQuantity)}
+          </span>
+          {showCart && (
+            <CartPopup id="cart-popup"  />
+          )}
         </div>
       </div>
 

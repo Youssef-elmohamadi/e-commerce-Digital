@@ -1,4 +1,4 @@
-import React,{ useState,useContext } from "react";
+import React, { useState, useContext } from "react";
 import StarRatings from "react-star-ratings";
 import { BsFillStarFill } from "react-icons/bs";
 import { TbStarHalfFilled } from "react-icons/tb";
@@ -12,55 +12,72 @@ import { IoMdArrowDropdown } from "react-icons/io";
 import { useInView } from "react-intersection-observer";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "./swiper.css";
-//offline products
-import productsApi from "../products.json";
+import { useDispatch } from "react-redux";
+import { addItem } from "./Redux/cartSlice/CartSlice";
+import QuickViewPopup from "./QuickViewPopup";
 import ShopByCategoriesContext from "./ShopByCategoriesContext";
-
+import visiblePopupContext from "./CartPopupContext";
+import AddedToCartAlert from "./AddedToCartAlert";
 const LazyImage = ({ src, alt, className }) => {
   const { ref, inView } = useInView({
-    threshold: 0.1, 
-    triggerOnce: true, 
+    threshold: 0.1,
+    triggerOnce: true,
   });
   const [isLoading, setIsLoading] = useState(true);
 
   const handleImageLoad = () => {
-    setIsLoading(false); 
+    setIsLoading(false);
   };
   return (
-    
     <div className="relative">
-   
-    {isLoading && (
-      <div className="absolute inset-0 flex items-center justify-center bg-gray-100">
-        <div className="spinner border-4 border-gray-300 border-t-4 border-t-primary rounded-full w-10 h-10 animate-spin"></div>
-      </div>
-    )}
+      {isLoading && (
+        <div className="absolute inset-0 flex items-center justify-center bg-gray-100">
+          <div className="spinner border-4 border-gray-300 border-t-4 border-t-primary rounded-full w-10 h-10 animate-spin"></div>
+        </div>
+      )}
 
-    
-    <img
-      ref={ref}
-      src={inView ? src : ""}
-      alt={alt}
-      className={`${className} transition-opacity duration-500 ease-in-out ${
-        inView && !isLoading ? "opacity-100" : "opacity-0"
-      }`}
-      onLoad={handleImageLoad} 
-    />
-  </div>
+      <img
+        ref={ref}
+        src={inView ? src : ""}
+        alt={alt}
+        className={`${className} transition-opacity duration-500 ease-in-out ${
+          inView && !isLoading ? "opacity-100" : "opacity-0"
+        }`}
+        onLoad={handleImageLoad}
+      />
+    </div>
   );
 };
 const NewArrivals = () => {
-  const [showMore, setShowMore] =useState(false);
+  const { showPopup, visible } = useContext(visiblePopupContext);
+  const [showMore, setShowMore] = useState(false);
   const handleShowMore = () => setShowMore(!showMore);
-  console.log(showMore)
+  const [quickViewProduct, setQuickViewProduct] = useState(null);
+
+  const handleQuickView = (product) => {
+    setQuickViewProduct(product);
+    console.log(product);
+    
+  };
+
+  const handleCloseQuickView = () => {
+    setQuickViewProduct(null);
+  };
+
   const { productsApi } = useContext(ShopByCategoriesContext);
   const columns = [];
   for (let i = 0; i < productsApi.length; i += 2) {
     columns.push(productsApi.slice(i, i + 2));
   }
+  const dispatch = useDispatch();
+  const handleAddToCart = (product) => {
+    dispatch(addItem(product));
+    showPopup(product);
+  };
+
   return (
-    
-      <>
+    <>
+      {visible && <AddedToCartAlert />}
       <div className="flex items-center w-full">
         <h2 className="lg:text-2xl text-base  m-0 font-bold">New Arrivals</h2>
         <div className="flex-1 h-[1px] mt-1 bg-gray-500 ml-4"></div>
@@ -81,14 +98,22 @@ const NewArrivals = () => {
             smarttelevision
           </h2>
         </div>
-        <div className=" w-48 h-11 border relative  xl:hidden rounded " onClick={()=>{handleShowMore()}}>
-          <div className="flex items-center justify-around h-full cursor-pointer text-sm text-gray-500 uppercase " >smartphone
-            <IoMdArrowDropdown size={20}/>
+        <div
+          className=" w-48 h-11 border relative  xl:hidden rounded "
+          onClick={() => {
+            handleShowMore();
+          }}
+        >
+          <div className="flex items-center justify-around h-full cursor-pointer text-sm text-gray-500 uppercase ">
+            smartphone
+            <IoMdArrowDropdown size={20} />
           </div>
           <div
-  className={`absolute top-14 z-20 left-0 w-full border bg-white p-2 ${showMore ? 'block' : 'hidden'}`}>
-          
-          <MdArrowDropUp className="w-11 h-6 stroke-gray-500 fill-gray-500 absolute -top-4 right-2" />
+            className={`absolute top-14 z-20 left-0 w-full border bg-white p-2 ${
+              showMore ? "block" : "hidden"
+            }`}
+          >
+            <MdArrowDropUp className="w-11 h-6 stroke-gray-500 fill-gray-500 absolute -top-4 right-2" />
             <ul>
               <li className="border-b last:border-b-0 px-3 py-2 uppercase text-sm text-gray-500 cursor-pointer ">
                 SmartPhones
@@ -134,7 +159,7 @@ const NewArrivals = () => {
                         <LazyImage
                           src={product.image}
                           alt={product.title}
-                          className="w-full h-[350px]"
+                          className="w-full  !h-[350px]"
                         />
                       </div>
                       <h2 className="text-lg mb-2">{product.title}</h2>
@@ -158,7 +183,10 @@ const NewArrivals = () => {
                       </div>
                     </div>
                     <div className="absolute top-20   -left-12  group-hover/product:left-3 transition-all duration-500 ease-in-out  flex-col items-center ">
-                      <div className="border rounded p-2 mb-1 relative group">
+                      <div
+                        onClick={() => handleAddToCart(product)}
+                        className="border rounded p-2 mb-1 relative group"
+                      >
                         <IoCartOutline
                           className="text-gray-500 font-semibold group-hover:text-white  z-30 relative"
                           size={21}
@@ -186,7 +214,10 @@ const NewArrivals = () => {
                           Add To Wish List
                         </span>
                       </div>
-                      <div className="border rounded p-2 mb-1 relative group">
+                      <div
+                        onClick={() => handleQuickView(product)}
+                        className="border rounded p-2 mb-1 relative group"
+                      >
                         <FiEye
                           className="text-gray-500 font-semibold group-hover:text-white transition-all duration-700 ease-in-out  z-30 relative"
                           size={21}
@@ -202,9 +233,14 @@ const NewArrivals = () => {
             </SwiperSlide>
           ))}
         </Swiper>
+        {quickViewProduct && (
+          <QuickViewPopup
+            product={quickViewProduct}
+            onClose={handleCloseQuickView}
+          />
+        )}
       </div>
-      </>
-
+    </>
   );
 };
 

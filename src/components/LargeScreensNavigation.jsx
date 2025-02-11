@@ -144,7 +144,7 @@ const NavigationBar = () => {
               <NavLink className="hover:text-primary flex items-center gap-1">
                 Features <MdOutlineKeyboardArrowDown />
               </NavLink>
-              <div className="absolute hidden  p-6 gap-20 border-t bg-white shadow-lg group-hover:flex min-w-[600px] top-[60px] -left-10 z-50">
+              <div className="absolute hidden  p-6 gap-20 border-t bg-white shadow-lg group-hover:flex min-w-[600px] top-[60px] -left-44 z-50">
                 <div className=" flex flex-col justify-between">
                   <div className="flex flex-col">
                     <h2 className="text-sm">Layouts</h2>
@@ -215,17 +215,7 @@ const NavigationBar = () => {
             </li>
             <li className="font-semibold py-4">
               <NavLink
-                to="/smartphones"
-                className={({ isActive }) =>
-                  isActive ? "text-primary" : "hover:text-primary"
-                }
-              >
-                Smartphones
-              </NavLink>
-            </li>
-            <li className="font-semibold py-4">
-              <NavLink
-                to="/blog"
+                to="/blogs"
                 className={({ isActive }) =>
                   isActive ? "text-primary" : "hover:text-primary"
                 }

@@ -1,5 +1,5 @@
 {
-   "products": [
+  "products": [
     {
       "id": 1,
       "sku": "SKU001",
@@ -10,7 +10,10 @@
       "category": "Technology",
       "classification": "Trending",
       "in_stock": true,
-      "image": "https://res.cloudinary.com/dggqefzwr/image/upload/v1734705254/23_2_vpf6vi.jpg"
+      "image": "https://res.cloudinary.com/dggqefzwr/image/upload/v1734705254/23_2_vpf6vi.jpg",
+      "color": "Black",
+      "size": "6.5 inches",
+      "manufacturer": "TechCorp"
     },
     {
       "id": 2,
@@ -22,7 +25,10 @@
       "category": "Electronics",
       "classification": "Top Sales",
       "in_stock": true,
-      "image": "https://res.cloudinary.com/dggqefzwr/image/upload/v1734705299/l-11_sk1poc.jpg"
+      "image": "https://res.cloudinary.com/dggqefzwr/image/upload/v1734705299/l-11_sk1poc.jpg",
+      "color": "Black",
+      "size": "55 inches",
+      "manufacturer": "VisionTech"
     },
     {
       "id": 3,
@@ -34,7 +40,10 @@
       "category": "Technology",
       "classification": "New",
       "in_stock": false,
-      "image": "https://res.cloudinary.com/dggqefzwr/image/upload/v1734705275/6_1_1_wziinn.jpg"
+      "image": "https://res.cloudinary.com/dggqefzwr/image/upload/v1734705275/6_1_1_wziinn.jpg",
+      "color": "Silver",
+      "size": "15.6 inches",
+      "manufacturer": "CompuElite"
     },
     {
       "id": 4,
@@ -46,7 +55,10 @@
       "category": "Appliances",
       "classification": "Trending",
       "in_stock": true,
-      "image": "https://res.cloudinary.com/dggqefzwr/image/upload/v1734705264/2_1_dlte7a.jpg"
+      "image": "https://res.cloudinary.com/dggqefzwr/image/upload/v1734705264/2_1_dlte7a.jpg",
+      "color": "Stainless Steel",
+      "size": "18 cubic feet",
+      "manufacturer": "HomeCool"
     },
     {
       "id": 5,
@@ -58,7 +70,10 @@
       "category": "Accessories",
       "classification": "Trending",
       "in_stock": true,
-      "image": "https://res.cloudinary.com/dggqefzwr/image/upload/v1734705266/4_6_ypfvhp.jpg"
+      "image": "https://res.cloudinary.com/dggqefzwr/image/upload/v1734705266/4_6_ypfvhp.jpg",
+      "color": "White",
+      "size": "Standard",
+      "manufacturer": "AudioWave"
     },
     {
       "id": 6,
@@ -70,7 +85,10 @@
       "category": "Gaming",
       "classification": "New",
       "in_stock": true,
-      "image": "https://res.cloudinary.com/dggqefzwr/image/upload/v1734705299/l-11_sk1poc.jpg"
+      "image": "https://res.cloudinary.com/dggqefzwr/image/upload/v1734705299/l-11_sk1poc.jpg",
+      "color": "Black",
+      "size": "Standard",
+      "manufacturer": "GameTech"
     },
     {
       "id": 7,
@@ -82,7 +100,10 @@
       "category": "Accessories",
       "classification": "Trending",
       "in_stock": true,
-      "image": "https://res.cloudinary.com/dggqefzwr/image/upload/v1734705251/17_gpaxeo.jpg"
+      "image": "https://res.cloudinary.com/dggqefzwr/image/upload/v1734705251/17_gpaxeo.jpg",
+      "color": "Silver",
+      "size": "42mm",
+      "manufacturer": "WearableX"
     },
     {
       "id": 8,
@@ -94,7 +115,10 @@
       "category": "Appliances",
       "classification": "Trending",
       "in_stock": false,
-      "image": "https://res.cloudinary.com/dggqefzwr/image/upload/v1734705251/1_u6u9ma.jpg"
+      "image": "https://res.cloudinary.com/dggqefzwr/image/upload/v1734705251/1_u6u9ma.jpg",
+      "color": "White",
+      "size": "Medium",
+      "manufacturer": "PureAir"
     },
     {
       "id": 9,
@@ -106,7 +130,10 @@
       "category": "Technology",
       "classification": "New",
       "in_stock": true,
-      "image": "https://res.cloudinary.com/dggqefzwr/image/upload/v1734705256/10_4_p6nepa.jpg"
+      "image": "https://res.cloudinary.com/dggqefzwr/image/upload/v1734705256/10_4_p6nepa.jpg",
+      "color": "Grey",
+      "size": "10 inches",
+      "manufacturer": "TabWorld"
     },
     {
       "id": 10,
@@ -118,7 +145,10 @@
       "category": "Transportation",
       "classification": "Trending",
       "in_stock": true,
-      "image": "https://res.cloudinary.com/dggqefzwr/image/upload/v1734705254/21_1_jwiuya.jpg"
+      "image": "https://res.cloudinary.com/dggqefzwr/image/upload/v1734705254/21_1_jwiuya.jpg",
+      "color": "Red",
+      "size": "Adult",
+      "manufacturer": "EcoRide"
     },
     {
       "id": 11,
@@ -130,7 +160,10 @@
       "category": "Appliances",
       "classification": "Top Sales",
       "in_stock": true,
-      "image": "https://res.cloudinary.com/dggqefzwr/image/upload/v1734705251/15_2_ne9hny.jpg"
+      "image": "https://res.cloudinary.com/dggqefzwr/image/upload/v1734705251/15_2_ne9hny.jpg",
+      "color": "Black",
+      "size": "1.5L",
+      "manufacturer": "BrewMaster"
     },
     {
       "id": 12,
@@ -142,7 +175,10 @@
       "category": "Gaming",
       "classification": "Trending",
       "in_stock": true,
-      "image": "https://res.cloudinary.com/dggqefzwr/image/upload/v1734705251/1_u6u9ma.jpg"
+      "image": "https://res.cloudinary.com/dggqefzwr/image/upload/v1734705251/1_u6u9ma.jpg",
+      "color": "Black",
+      "size": "Standard",
+      "manufacturer": "SoundMax"
     },
     {
       "id": 13,
@@ -154,7 +190,10 @@
       "category": "Photography",
       "classification": "New",
       "in_stock": false,
-      "image": "https://res.cloudinary.com/dggqefzwr/image/upload/v1734705265/4_3_ik2wij.jpg"
+      "image": "https://res.cloudinary.com/dggqefzwr/image/upload/v1734705265/4_3_ik2wij.jpg",
+      "color": "Black",
+      "size": "Compact",
+      "manufacturer": "PhotoTech"
     },
     {
       "id": 14,
@@ -166,7 +205,10 @@
       "category": "Audio",
       "classification": "Top Sales",
       "in_stock": true,
-      "image": "https://res.cloudinary.com/dggqefzwr/image/upload/v1734705252/19_1_1_j2rnxl.jpg"
+      "image": "https://res.cloudinary.com/dggqefzwr/image/upload/v1734705252/19_1_1_j2rnxl.jpg",
+      "color": "Blue",
+      "size": "Small",
+      "manufacturer": "SoundWave"
     },
     {
       "id": 15,
@@ -178,7 +220,10 @@
       "category": "Accessories",
       "classification": "Trending",
       "in_stock": true,
-      "image": "https://res.cloudinary.com/dggqefzwr/image/upload/v1734705265/3_2_azbn4a.jpg"
+      "image": "https://res.cloudinary.com/dggqefzwr/image/upload/v1734705265/3_2_azbn4a.jpg",
+      "color": "Black",
+      "size": "Standard",
+      "manufacturer": "FitTrack"
     },
     {
       "id": 16,
@@ -190,7 +235,10 @@
       "category": "Appliances",
       "classification": "Top Sales",
       "in_stock": true,
-      "image": "https://res.cloudinary.com/dggqefzwr/image/upload/v1734705252/14_1_lfvg0c.jpg"
+      "image": "https://res.cloudinary.com/dggqefzwr/image/upload/v1734705252/14_1_lfvg0c.jpg",
+      "color": "White",
+      "size": "Medium",
+      "manufacturer": "CleanBot"
     },
     {
       "id": 17,
@@ -202,7 +250,10 @@
       "category": "Appliances",
       "classification": "New",
       "in_stock": true,
-      "image": "https://res.cloudinary.com/dggqefzwr/image/upload/v1734705268/28_cq5d10.jpg"
+      "image": "https://res.cloudinary.com/dggqefzwr/image/upload/v1734705268/28_cq5d10.jpg",
+      "color": "Stainless Steel",
+      "size": "1.7L",
+      "manufacturer": "BoilEase"
     },
     {
       "id": 18,
@@ -214,7 +265,10 @@
       "category": "Technology",
       "classification": "Trending",
       "in_stock": true,
-      "image": "https://res.cloudinary.com/dggqefzwr/image/upload/v1734705265/3_2_1_aw28tu.jpg"
+      "image": "https://res.cloudinary.com/dggqefzwr/image/upload/v1734705265/3_2_1_aw28tu.jpg",
+      "color": "Black",
+      "size": "Compact",
+      "manufacturer": "SkyFly"
     },
     {
       "id": 19,
@@ -226,7 +280,10 @@
       "category": "Home",
       "classification": "Top Sales",
       "in_stock": true,
-      "image": "https://res.cloudinary.com/dggqefzwr/image/upload/v1734705276/8_2_pd2ngi.jpg"
+      "image": "https://res.cloudinary.com/dggqefzwr/image/upload/v1734705276/8_2_pd2ngi.jpg",
+      "color": "Multi-color",
+      "size": "Standard",
+      "manufacturer": "BrightHome"
     },
     {
       "id": 20,
@@ -238,275 +295,278 @@
       "category": "Accessories",
       "classification": "Trending",
       "in_stock": false,
-      "image": "https://res.cloudinary.com/dggqefzwr/image/upload/v1734705255/21_zw5kzq.jpg"
+      "image": "https://res.cloudinary.com/dggqefzwr/image/upload/v1734705255/21_zw5kzq.jpg",
+      "color": "Black",
+      "size": "10,000mAh",
+      "manufacturer": "ChargeFast"
     }
-    ],
+  ],
 
-    "categories":[
+  "categories": [
+    {
+      "name": "Smartphones",
+      "subcategories": [
         {
-          "name": "Smartphones",
+          "name": "Accessories for iPhone"
+        },
+        {
+          "name": "Accessories for iPad"
+        },
+        {
+          "name": "Accessories for Tablet PC"
+        },
+        {
+          "name": "Tablet PC"
+        }
+      ]
+    },
+    {
+      "name": "Computer & Laptop",
+      "subcategories": [
+        {
+          "name": "Laptop Gaming",
           "subcategories": [
             {
-              "name": "Accessories for iPhone"
+              "name": "MSI GS76 Stealth"
             },
             {
-              "name": "Accessories for iPad"
+              "name": "Razer Blade"
             },
             {
-              "name": "Accessories for Tablet PC"
+              "name": "Alienware Area-51m"
             },
             {
-              "name": "Tablet PC"
+              "name": "Acer Predator Triton 500"
+            },
+            {
+              "name": "Dell G3 Gaming Laptop"
+            },
+            {
+              "name": "Lenovo Legion Y7000"
             }
           ]
         },
         {
-          "name": "Computer & Laptop",
+          "name": "Laptop Workstation",
           "subcategories": [
             {
-              "name": "Laptop Gaming",
-              "subcategories": [
-                {
-                  "name": "MSI GS76 Stealth"
-                },
-                {
-                  "name": "Razer Blade"
-                },
-                {
-                  "name": "Alienware Area-51m"
-                },
-                {
-                  "name": "Acer Predator Triton 500"
-                },
-                {
-                  "name": "Dell G3 Gaming Laptop"
-                },
-                {
-                  "name": "Lenovo Legion Y7000"
-                }
-              ]
+              "name": "Aesthetics"
             },
             {
-              "name": "Laptop Workstation",
-              "subcategories": [
-                {
-                  "name": "Aesthetics"
-                },
-                {
-                  "name": "Quantel Paintbox"
-                },
-                {
-                  "name": "Lisp Machine"
-                },
-                {
-                  "name": "Dell Precision"
-                },
-                {
-                  "name": "ThinkStation"
-                },
-                {
-                  "name": "Xerox Daybreak"
-                }
-              ]
+              "name": "Quantel Paintbox"
             },
             {
-              "name": "Laptop Build Configuration",
-              "subcategories": [
-                {
-                  "name": "Ram"
-                },
-                {
-                  "name": "HDD"
-                },
-                {
-                  "name": "VGA"
-                },
-                {
-                  "name": "Monitor"
-                },
-                {
-                  "name": "CPU"
-                },
-                {
-                  "name": "Window OS"
-                }
-              ]
+              "name": "Lisp Machine"
             },
             {
-              "name": "Accessories for Laptop",
-              "subcategories": [
-                {
-                  "name": "Keyboard"
-                },
-                {
-                  "name": "Mouse"
-                },
-                {
-                  "name": "Software"
-                },
-                {
-                  "name": "VGA Onboard"
-                },
-                {
-                  "name": "Cleaner"
-                },
-                {
-                  "name": "Monitor"
-                },
-                {
-                  "name": "Touch Pad"
-                },
-                {
-                  "name": "Laptop Bags"
-                }
-              ]
+              "name": "Dell Precision"
+            },
+            {
+              "name": "ThinkStation"
+            },
+            {
+              "name": "Xerox Daybreak"
             }
           ]
         },
         {
-          "name": "Computer",
+          "name": "Laptop Build Configuration",
           "subcategories": [
             {
-              "name": "Mini Computer"
+              "name": "Ram"
             },
             {
-              "name": "All in One PC"
+              "name": "HDD"
             },
             {
-              "name": "Accessories for Computer"
+              "name": "VGA"
+            },
+            {
+              "name": "Monitor"
+            },
+            {
+              "name": "CPU"
+            },
+            {
+              "name": "Window OS"
             }
           ]
         },
         {
-          "name": "Smart Televisions",
+          "name": "Accessories for Laptop",
           "subcategories": [
             {
-              "name": "Washing Machine"
+              "name": "Keyboard"
             },
+            {
+              "name": "Mouse"
+            },
+            {
+              "name": "Software"
+            },
+            {
+              "name": "VGA Onboard"
+            },
+            {
+              "name": "Cleaner"
+            },
+            {
+              "name": "Monitor"
+            },
+            {
+              "name": "Touch Pad"
+            },
+            {
+              "name": "Laptop Bags"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Computer",
+      "subcategories": [
+        {
+          "name": "Mini Computer"
+        },
+        {
+          "name": "All in One PC"
+        },
+        {
+          "name": "Accessories for Computer"
+        }
+      ]
+    },
+    {
+      "name": "Smart Televisions",
+      "subcategories": [
+        {
+          "name": "Washing Machine"
+        },
+        {
+          "name": "Clothes Washing Machines"
+        },
+        {
+          "name": "Washer & Dryer"
+        },
+        {
+          "name": "Special Laundry Machines"
+        }
+      ]
+    },
+    {
+      "name": "Home Appliances",
+      "subcategories": [
+        {
+          "name": "Refrigerators",
+          "subcategories": [
+            {
+              "name": "French Door"
+            },
+            {
+              "name": "Bottom Freezer"
+            },
+            {
+              "name": "Side-By-Side"
+            },
+            {
+              "name": "Top Freezer"
+            },
+            {
+              "name": "Wine Refrigerator"
+            },
+            {
+              "name": "Compact Refrigerator"
+            }
+          ]
+        },
+        {
+          "name": "Washing Machines",
+          "subcategories": [
             {
               "name": "Clothes Washing Machines"
             },
             {
-              "name": "Washer & Dryer"
+              "name": "Washers & Dryers"
             },
             {
-              "name": "Special Laundry Machines"
+              "name": "Specialty Laundry Machines"
+            },
+            {
+              "name": "Clothes Dryers"
+            },
+            {
+              "name": "Stacked Washer & Dryer Units"
+            },
+            {
+              "name": "Washer Parts & Accessories"
             }
           ]
         },
         {
-          "name": "Home Appliances",
+          "name": "Air Conditioners",
           "subcategories": [
             {
-              "name": "Refrigerators",
-              "subcategories": [
-                {
-                  "name": "French Door"
-                },
-                {
-                  "name": "Bottom Freezer"
-                },
-                {
-                  "name": "Side-By-Side"
-                },
-                {
-                  "name": "Top Freezer"
-                },
-                {
-                  "name": "Wine Refrigerator"
-                },
-                {
-                  "name": "Compact Refrigerator"
-                }
-              ]
+              "name": "Window Air Conditioners"
             },
             {
-              "name": "Washing Machines",
-              "subcategories": [
-                {
-                  "name": "Clothes Washing Machines"
-                },
-                {
-                  "name": "Washers & Dryers"
-                },
-                {
-                  "name": "Specialty Laundry Machines"
-                },
-                {
-                  "name": "Clothes Dryers"
-                },
-                {
-                  "name": "Stacked Washer & Dryer Units"
-                },
-                {
-                  "name": "Washer Parts & Accessories"
-                }
-              ]
+              "name": "Portable Air Conditioners"
             },
             {
-              "name": "Air Conditioners",
-              "subcategories": [
-                {
-                  "name": "Window Air Conditioners"
-                },
-                {
-                  "name": "Portable Air Conditioners"
-                },
-                {
-                  "name": "Room Air Conditioners"
-                },
-                {
-                  "name": "Evaporative Coolers"
-                },
-                {
-                  "name": "Air Conditioner Accessories"
-                },
-                {
-                  "name": "Split System Air Conditioners"
-                },
-                {
-                  "name": "Household Tower Fans"
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "name": "Cameras & Camcorders",
-          "subcategories": [
-            {
-              "name": "Digital Cameras"
+              "name": "Room Air Conditioners"
             },
             {
-              "name": "DSLR Cameras"
+              "name": "Evaporative Coolers"
             },
             {
-              "name": "Camcorders"
+              "name": "Air Conditioner Accessories"
             },
             {
-              "name": "Camera Accessories"
-            }
-          ]
-        },
-        {
-          "name": "Gaming Consoles",
-          "subcategories": [
-            {
-              "name": "PlayStation"
+              "name": "Split System Air Conditioners"
             },
             {
-              "name": "Xbox"
-            },
-            {
-              "name": "Nintendo Switch"
-            },
-            {
-              "name": "Gaming Accessories"
+              "name": "Household Tower Fans"
             }
           ]
         }
-      ],
-      "blogs": [
+      ]
+    },
+    {
+      "name": "Cameras & Camcorders",
+      "subcategories": [
+        {
+          "name": "Digital Cameras"
+        },
+        {
+          "name": "DSLR Cameras"
+        },
+        {
+          "name": "Camcorders"
+        },
+        {
+          "name": "Camera Accessories"
+        }
+      ]
+    },
+    {
+      "name": "Gaming Consoles",
+      "subcategories": [
+        {
+          "name": "PlayStation"
+        },
+        {
+          "name": "Xbox"
+        },
+        {
+          "name": "Nintendo Switch"
+        },
+        {
+          "name": "Gaming Accessories"
+        }
+      ]
+    }
+  ],
+  "blogs": [
     {
       "id": 1,
       "title": "Join Millions of Others: Embrace the Digital Era",
@@ -683,61 +743,61 @@
     }
   ],
   "popular_categories": [
-      {
-        "id": 1,
-        "name": "Men's Watches",
-        "description": "Stylish and classic watches for men.",
-        "image": "https://res.cloudinary.com/dggqefzwr/image/upload/v1734705285/cat-6_avfxew.png",
-        "available_devices": 120
-      },
-      {
-        "id": 2,
-        "name": "All Accessories",
-        "description": "A wide range of accessories for daily use.",
-        "image": "https://res.cloudinary.com/dggqefzwr/image/upload/v1734705288/cat-7_1_ual8w6.png",
-        "available_devices": 450
-      },
-      {
-        "id": 3,
-        "name": "Smart Watches",
-        "description": "Modern smartwatches with advanced features.",
-        "image": "https://res.cloudinary.com/dggqefzwr/image/upload/v1734705287/cat11_ncifpa.png",
-        "available_devices": 75
-      },
-      {
-        "id": 4,
-        "name": "Audio Theaters",
-        "description": "High-quality audio systems for an immersive experience.",
-        "image": "https://res.cloudinary.com/dggqefzwr/image/upload/v1734705284/cat-1_ypdqfx.png",
-        "available_devices": 30
-      },
-      {
-        "id": 5,
-        "name": "Smart Televisions",
-        "description": "Smart TVs with 4K resolution and smart features.",
-        "image": "https://res.cloudinary.com/dggqefzwr/image/upload/v1734705287/cat-4_as13rm.png",
-        "available_devices": 50
-      },
-      {
-        "id": 6,
-        "name": "Smartphones",
-        "description": "Latest smartphones with cutting-edge technology.",
-        "image": "https://res.cloudinary.com/dggqefzwr/image/upload/v1734705284/cat-1_ypdqfx.png",
-        "available_devices": 300
-      },
-      {
-        "id": 7,
-        "name": "Digital Cameras",
-        "description": "Professional and personal digital cameras.",
-        "image": "https://res.cloudinary.com/dggqefzwr/image/upload/v1734705289/cat-7_sev1ed.png",
-        "available_devices": 85
-      },
-      {
-        "id": 8,
-        "name": "Computers & Laptops",
-        "description": "High-performance computers and laptops for all needs.",
-        "image": "https://res.cloudinary.com/dggqefzwr/image/upload/v1734705284/cat-2_gjv9yh.png",
-        "available_devices":200
+    {
+      "id": 1,
+      "name": "Men's Watches",
+      "description": "Stylish and classic watches for men.",
+      "image": "https://res.cloudinary.com/dggqefzwr/image/upload/v1734705285/cat-6_avfxew.png",
+      "available_devices": 120
+    },
+    {
+      "id": 2,
+      "name": "All Accessories",
+      "description": "A wide range of accessories for daily use.",
+      "image": "https://res.cloudinary.com/dggqefzwr/image/upload/v1734705288/cat-7_1_ual8w6.png",
+      "available_devices": 450
+    },
+    {
+      "id": 3,
+      "name": "Smart Watches",
+      "description": "Modern smartwatches with advanced features.",
+      "image": "https://res.cloudinary.com/dggqefzwr/image/upload/v1734705287/cat11_ncifpa.png",
+      "available_devices": 75
+    },
+    {
+      "id": 4,
+      "name": "Audio Theaters",
+      "description": "High-quality audio systems for an immersive experience.",
+      "image": "https://res.cloudinary.com/dggqefzwr/image/upload/v1734705284/cat-1_ypdqfx.png",
+      "available_devices": 30
+    },
+    {
+      "id": 5,
+      "name": "Smart Televisions",
+      "description": "Smart TVs with 4K resolution and smart features.",
+      "image": "https://res.cloudinary.com/dggqefzwr/image/upload/v1734705287/cat-4_as13rm.png",
+      "available_devices": 50
+    },
+    {
+      "id": 6,
+      "name": "Smartphones",
+      "description": "Latest smartphones with cutting-edge technology.",
+      "image": "https://res.cloudinary.com/dggqefzwr/image/upload/v1734705284/cat-1_ypdqfx.png",
+      "available_devices": 300
+    },
+    {
+      "id": 7,
+      "name": "Digital Cameras",
+      "description": "Professional and personal digital cameras.",
+      "image": "https://res.cloudinary.com/dggqefzwr/image/upload/v1734705289/cat-7_sev1ed.png",
+      "available_devices": 85
+    },
+    {
+      "id": 8,
+      "name": "Computers & Laptops",
+      "description": "High-performance computers and laptops for all needs.",
+      "image": "https://res.cloudinary.com/dggqefzwr/image/upload/v1734705284/cat-2_gjv9yh.png",
+      "available_devices": 200
     }
   ]
 }

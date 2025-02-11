@@ -6,8 +6,12 @@ import { CiUser } from "react-icons/ci";
 import { Link } from "react-router-dom";
 import { CiHeart } from "react-icons/ci";
 import { IoCartOutline } from "react-icons/io5";
+import CartPopup from "./CartPopup";
+import { useSelector } from "react-redux";
 
 const Header = () => {
+  const totalPrice = useSelector((state) => state.cart.totalPrice);
+  const totalQuantity = useSelector((state) => state.cart.totalQuantity);
   const [searchTerm, setSearchTerm] = useState("All Categories");
   function handleSearch(item) {
     setSearchTerm(item);
@@ -15,11 +19,11 @@ const Header = () => {
   const { categoriesApi: categories } = useContext(ShopByCategoriesContext);
   return (
     <>
-      <div className="flex items-center justify-around  gap-5 w-full  bg-[#121212] py-4 px-3 ">
-        <div className="flex items-center w-1/4 gap-2">
+      <div className="flex items-center justify-around  gap-5 w-full  bg-[#121212]  px-3 ">
+        <div className="flex items-center w-1/4 gap-2 py-4">
           <img src={logo} alt="Logo" />
         </div>
-        <div className="w-1/3 bg-dark">
+        <div className="w-1/3 bg-dark py-4">
           <form className="flex relative items-center overflow-hidden w-full rounded  ">
             <input
               type="text"
@@ -76,8 +80,8 @@ const Header = () => {
           </form>
         </div>
         <div>
-          <div className="flex items-center gap-2">
-            <ul className="flex items-center gap-2">
+          <div className="flex items-center gap-2 ">
+            <ul className="flex items-center gap-2 py-4">
               <li className=" text-slate-50">
                 <CiUser size={26} className="ms-2 " />
               </li>
@@ -95,20 +99,23 @@ const Header = () => {
                 </Link>
               </li>
             </ul>
-            <div className=" items-center hidden xl:flex gap-2 relative">
+            <div className=" items-center hidden xl:flex gap-2 relative py-4">
               <CiHeart size={28} className="mx-2 text-slate-50" />
               <div className="w-5 h-5 bg-primary rounded-full text-white absolute text-sm -top-2  right-[90px] flex items-center justify-center">
                 0
               </div>
               <p className="text-sm text-slate-50 uppercase">My Wishlist</p>
             </div>
-            <div className="flex items-center gap-2 relative">
+            <div className="flex items-center gap-2 relative  group/cart py-4 ">
               <IoCartOutline size={28} className="mx-2 text-slate-50" />
-              <div className="w-5 h-5 bg-primary rounded-full text-white absolute text-sm -top-2  right-[110px] flex items-center justify-center">
-                0
+              <div className="w-5 h-5 bg-primary rounded-full text-white absolute text-sm top-1  right-[135px] flex items-center justify-center">
+                {totalQuantity}
               </div>
               <p className="text-sm text-slate-50 uppercase">My Cart-</p>
-              <p className="text-sm uppercase font-bold text-primary">$00.0</p>
+              <p className="text-sm uppercase font-bold text-primary">
+                ${totalPrice.toFixed(2)}
+              </p>
+              <CartPopup />
             </div>
           </div>
         </div>
