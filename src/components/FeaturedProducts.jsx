@@ -13,6 +13,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import { useInView } from "react-intersection-observer";
 import ShopByCategoriesContext from "./ShopByCategoriesContext";
+import QuickViewPopup from "./QuickViewPopup";
 import { useDispatch } from "react-redux";
 import { addItem } from "./Redux/cartSlice/CartSlice";
 import visiblePopupContext from "./CartPopupContext";
@@ -63,6 +64,17 @@ const FeaturedProducts = () => {
   for (let i = 0; i < productsApi.length; i += 2) {
     columns.push(productsApi.slice(i, i + 2));
   }
+
+  const [quickViewProduct, setQuickViewProduct] = useState(null);
+
+  const handleQuickView = (product) => {
+    setQuickViewProduct(product);
+    console.log(product);
+  };
+
+  const handleCloseQuickView = () => {
+    setQuickViewProduct(null);
+  };
 
   return (
     <>
@@ -188,7 +200,10 @@ const FeaturedProducts = () => {
                             Add To Wish List
                           </span>
                         </div>
-                        <div className="border rounded p-2 mb-1 relative group">
+                        <div
+                          onClick={() => handleQuickView(product)}
+                          className="border rounded p-2 mb-1 relative group"
+                        >
                           <FiEye
                             className="text-gray-500 font-semibold group-hover:text-white transition-all duration-700 ease-in-out  z-30 relative"
                             size={21}
@@ -204,6 +219,12 @@ const FeaturedProducts = () => {
               </SwiperSlide>
             ))}
           </Swiper>
+          {quickViewProduct && (
+            <QuickViewPopup
+              product={quickViewProduct}
+              onClose={handleCloseQuickView}
+            />
+          )}
         </div>
       </div>
     </>

@@ -10,6 +10,7 @@ import { BsFillStarFill } from "react-icons/bs";
 import { TbStarHalfFilled } from "react-icons/tb";
 import { MdOutlineStarBorder } from "react-icons/md";
 import { useDispatch } from "react-redux";
+import QuickViewPopup from "./QuickViewPopup";
 import { addItem } from "./Redux/cartSlice/CartSlice";
 import visiblePopupContext from "./CartPopupContext";
 import { addItemToCompare } from "./Redux/compareSlice/CompareSlice";
@@ -54,6 +55,17 @@ const ShopProducts = () => {
   };
   const handleAddToCompare = (product) => {
     dispatch(addItemToCompare(product));
+  };
+  const [quickViewProduct, setQuickViewProduct] = useState(null);
+
+  const handleQuickView = (product) => {
+    setQuickViewProduct(product);
+    console.log(product);
+    
+  };
+
+  const handleCloseQuickView = () => {
+    setQuickViewProduct(null);
   };
   return (
     <>
@@ -131,7 +143,8 @@ const ShopProducts = () => {
                     Add To Wish List
                   </span>
                 </div>
-                <div className="border rounded p-2 mb-1 relative group">
+                <div onClick={() => handleQuickView(product)}
+                className="border rounded p-2 mb-1 relative group">
                   <FiEye
                     className="text-gray-500 font-semibold group-hover:text-white transition-all duration-700 ease-in-out  z-30 relative"
                     size={21}
@@ -144,6 +157,12 @@ const ShopProducts = () => {
             </div>
           ))}
         </div>
+        {quickViewProduct && (
+          <QuickViewPopup
+            product={quickViewProduct}
+            onClose={handleCloseQuickView}
+          />
+        )}
       </div>
     </>
   );

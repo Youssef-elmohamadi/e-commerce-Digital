@@ -265,21 +265,10 @@ const SmallScreensHeader = () => {
                     Shop
                   </NavLink>
                 </li>
+
                 <li className="py-1 hover:text-primary">
                   <NavLink
-                    to="/shop"
-                    className={({ isActive }) =>
-                      isActive
-                        ? "text-primary text-sm flex items-center uppercase"
-                        : "hover:text-primary text-sm flex items-center uppercase"
-                    }
-                  >
-                    SmartPhones
-                  </NavLink>
-                </li>
-                <li className="py-1 hover:text-primary">
-                  <NavLink
-                    to="/shop"
+                    to="/blogs"
                     className={({ isActive }) =>
                       isActive
                         ? "text-primary text-sm flex items-center uppercase"
@@ -291,7 +280,7 @@ const SmallScreensHeader = () => {
                 </li>
                 <li className="py-1 hover:text-primary">
                   <NavLink
-                    to="/shop"
+                    to="/about"
                     className={({ isActive }) =>
                       isActive
                         ? "text-primary text-sm flex items-center uppercase"
@@ -303,7 +292,7 @@ const SmallScreensHeader = () => {
                 </li>
                 <li className="py-1  hover:text-primary">
                   <NavLink
-                    to="/shop"
+                    to="/contact"
                     className={({ isActive }) =>
                       isActive
                         ? "text-primary flex items-center uppercase"

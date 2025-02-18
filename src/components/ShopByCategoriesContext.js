@@ -35,6 +35,7 @@ export const ShopByCategoriesProvider = ({ children }) => {
   const [blogs, setBlogs] = useState([]);
   const [popular_categories, setPopular_categories] = useState([]);
   const [bestSellers, setBestSellers] = useState([]);
+  const [testimonials, setTestimonials] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
 
@@ -51,7 +52,8 @@ export const ShopByCategoriesProvider = ({ children }) => {
           setProductsApi(data.products || []);
           setBlogs(data.blogs || []);
           setPopular_categories(data.popular_categories || []);
-          setBestSellers (data.bes)
+          setBestSellers(data.bes);
+          setTestimonials(data.testimonials);
         }
       } catch (error) {
         console.error("Error fetching data:", error);
@@ -74,6 +76,7 @@ export const ShopByCategoriesProvider = ({ children }) => {
         productsApi,
         blogs,
         popular_categories,
+        testimonials,
       }}
     >
       {children}

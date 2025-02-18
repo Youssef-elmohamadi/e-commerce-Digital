@@ -8,6 +8,8 @@ import Blogs from "./components/Blogs";
 import { Provider } from "react-redux";
 import store from "./components/Redux/Store";
 import { PopupProvider } from "./components/CartPopupContext";
+import AboutUs from "./components/AboutUs";
+import ContactUs from "./components/ContactUs";
 function App() {
   return (
     <Provider store={store}>
@@ -19,6 +21,8 @@ function App() {
             <Route path="/signup" element={<Signup />} />
             <Route path="/shop" element={<Shop />} />
             <Route path="/blogs" element={<Blogs />} />
+            <Route path="/about" element={<AboutUs />} />
+            <Route path="/contact" element={<ContactUs />} />
           </Routes>
         </PopupProvider>
       </ShopByCategoriesProvider>

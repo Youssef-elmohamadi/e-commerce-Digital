@@ -57,7 +57,6 @@ const NewArrivals = () => {
   const handleQuickView = (product) => {
     setQuickViewProduct(product);
     console.log(product);
-    
   };
 
   const handleCloseQuickView = () => {
@@ -70,8 +69,9 @@ const NewArrivals = () => {
     columns.push(productsApi.slice(i, i + 2));
   }
   const dispatch = useDispatch();
+  const [quantity, setQuantity] = useState(1);
   const handleAddToCart = (product) => {
-    dispatch(addItem(product));
+    dispatch(addItem({ item: product, quantity: Number(quantity) }));
     showPopup(product);
   };
 
