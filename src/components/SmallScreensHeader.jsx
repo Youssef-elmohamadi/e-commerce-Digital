@@ -10,19 +10,21 @@ import italyFlag from "../images/italy.png";
 import germanFlag from "../images/germen.png";
 import { FaSearch } from "react-icons/fa";
 import { motion } from "framer-motion";
-import { NavLink, Link } from "react-router-dom";
+import { NavLink, Link, useNavigate } from "react-router-dom";
 import { MdOutlineKeyboardArrowUp } from "react-icons/md";
 import { MdOutlineKeyboardArrowDown } from "react-icons/md";
 import CartPopup from "./CartPopup";
 import { useSelector } from "react-redux";
 const SmallScreensHeader = () => {
+  const [searchTerm, setSearchTerm] = useState("");
   const [showSideBar, setShowSideBar] = useState(false);
-  const [activeTab, setActiveTab] = useState("menu"); // Keeps track of the active tab (Menu, Account, Setting)
-  const [showMoreFeatures, setShowMoreFeatures] = useState(false); // Keeps track of the active tab (Menu, Account, Setting)
-  const [showMoreComputers, setShowMoreComputers] = useState(false); // Keeps track of the active tab (Menu, Account, Setting)
+  const [activeTab, setActiveTab] = useState("menu");
+  const [showMoreFeatures, setShowMoreFeatures] = useState(false);
+  const [showMoreComputers, setShowMoreComputers] = useState(false);
   const { CategoriesData: categories, categoriesApi } = useContext(
     ShopByCategoriesContext
   );
+  const navigate = useNavigate();
   const [showCart, setShowCart] = useState(false);
 
   const toggleCart = () => {
@@ -68,6 +70,11 @@ const SmallScreensHeader = () => {
     setActiveTab((prevTab) => (prevTab === tabName ? tabName : tabName)); // Toggle the active tab
   };
 
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    navigate(`/shop?search=${encodeURIComponent(searchTerm)}`);
+  };
+
   return (
     <>
       {/* Header */}
@@ -91,21 +98,29 @@ const SmallScreensHeader = () => {
           <span className="text-white font-semibold bg-red-400 px-2 py-1 rounded">
             {useSelector((state) => state.cart.totalQuantity)}
           </span>
-          {showCart && (
-            <CartPopup id="cart-popup"  />
-          )}
+          {showCart && <CartPopup id="cart-popup" />}
         </div>
       </div>
 
       {/* Search Bar */}
-      <div className="flex items-center justify-center bg-gray-200 px-4 py-1 relative">
+      <form
+        onSubmit={handleSubmit}
+        className="flex items-center justify-center bg-gray-200 px-4 py-1 relative"
+      >
         <input
           type="text"
           className="w-full border outline-none px-2 py-2 rounded"
           placeholder="Search entry Store here..."
+          value={searchTerm}
+          onChange={(e) => setSearchTerm(e.target.value)}
         />
-        <FaSearch className="absolute right-6 text-gray-500" />
-      </div>
+        <button
+          type="submit"
+          className="absolute right-2 top-1/2 transform -translate-y-1/2"
+        >
+          <FaSearch size={20} />
+        </button>
+      </form>
 
       {/* Menu */}
       {showSideBar && (

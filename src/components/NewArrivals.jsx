@@ -147,7 +147,7 @@ const NewArrivals = () => {
           }}
         >
           {columns.map((column, columnIndex) => (
-            <SwiperSlide key={columnIndex} className="w-[23%]">
+            <SwiperSlide key={columnIndex}>
               <div className="flex flex-col gap-4 w-full">
                 {column.map((product, productIndex) => (
                   <div className="relative group/product overflow-hidden ">
@@ -159,7 +159,7 @@ const NewArrivals = () => {
                         <LazyImage
                           src={product.image}
                           alt={product.title}
-                          className="w-full  !h-[350px]"
+                          className="w-full  !h-[250px]"
                         />
                       </div>
                       <h2 className="text-lg mb-2">{product.title}</h2>

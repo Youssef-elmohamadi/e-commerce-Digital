@@ -14,9 +14,7 @@ import { MdOutlineStarBorder } from "react-icons/md";
 import { IoCartOutline } from "react-icons/io5";
 import { GrCompare } from "react-icons/gr";
 import { LuHeart } from "react-icons/lu";
-import ShopByCategoriesContext from "./ShopByCategoriesContext";
 import visiblePopupContext from "./CartPopupContext";
-import AddedToCartAlert from "./AddedToCartAlert";
 import { useDispatch } from "react-redux";
 import { addItem } from "./Redux/cartSlice/CartSlice";
 const QuickViewPopup = ({ product, onClose }) => {
@@ -48,20 +46,20 @@ const QuickViewPopup = ({ product, onClose }) => {
             modules={[Navigation, Pagination, Mousewheel, Keyboard]}
             className="lg:!w-1/2 w-full flex justify-center mySwiper !border "
           >
-            <SwiperSlide className="w-full h-full flex justify-center align-center ">
-              <img
-                src={product.image}
-                alt={product.title}
-                className="lg:w-full w-1/2 h-5/6 object-cover"
-              />
-            </SwiperSlide>
-            <SwiperSlide className="w-full h-full">
-              <img
-                src={product.image}
-                alt={product.title}
-                className="lg:w-full w-1/2  h-auto"
-              />
-            </SwiperSlide>
+            <SwiperSlide>
+  <div
+    className="flex justify-center items-center w-[90%] max-w-full  h-full"
+    style={{ backgroundImage: `url(${product.image})`, backgroundSize: "cover", backgroundPosition: "center" }}
+  >
+  </div>
+</SwiperSlide>
+            <SwiperSlide>
+  <div
+    className="flex justify-center items-center w-[90%] max-w-full  h-full"
+    style={{ backgroundImage: `url(${product.image})`, backgroundSize: "cover", backgroundPosition: "center" }}
+  >
+  </div>
+</SwiperSlide>
           </Swiper>
 
           <div className="lg:!w-1/2 w-full p-5">
@@ -87,9 +85,9 @@ const QuickViewPopup = ({ product, onClose }) => {
                 <span className="text-red-500">Out of Stock</span>
               )}
             </div>
-            <div className="flex items-center gap-2 my-4">{product.sku}</div>
+            <div className="flex items-center my-4">{product.sku}</div>
             <p className="text-gray-600 my-4">{product.description}</p>
-            <div className="flex items-center gap-2">
+            <div className="flex items-center gap-1">
               <div>
                 <span className="text-sm text-black font-semibold mr-2">
                   qty
@@ -106,23 +104,23 @@ const QuickViewPopup = ({ product, onClose }) => {
               </div>
               <div
                 onClick={() => handleAddToCart(product)}
-                className="group flex items-center gap-2 cursor-pointer border p-2 rounded transition-all duration-200 ease-linear hover:bg-primary"
+                className="group flex items-center cursor-pointer border p-2 rounded transition-all duration-200 ease-linear hover:bg-primary"
               >
                 <IoCartOutline
                   size={20}
                   className="text-gray-500 group-hover:text-white"
                 />
-                <p className="text-base lg:text-sm text-gray-500 group-hover:text-white">
+                <p className="text-sm hidden md:block text-gray-500 group-hover:text-white">
                   Add to cart
                 </p>
               </div>
-              <div className="group flex items-center gap-2 cursor-pointer border p-2 rounded transition-all duration-200 ease-linear hover:bg-primary">
+              <div className="group flex items-center cursor-pointer border p-2 rounded transition-all duration-200 ease-linear hover:bg-primary">
                 <GrCompare
                   size={20}
                   className="text-gray-500 group-hover:text-white"
                 />
               </div>
-              <div className="group flex items-center gap-2 cursor-pointer border p-2 rounded transition-all duration-200 ease-linear hover:bg-primary">
+              <div className="group flex items-center cursor-pointer border p-2 rounded transition-all duration-200 ease-linear hover:bg-primary">
                 <LuHeart
                   size={20}
                   className="text-gray-500 group-hover:text-white"
