@@ -3,6 +3,7 @@ import { RiDeleteBin6Line } from "react-icons/ri";
 import { IoSettingsSharp } from "react-icons/io5";
 import { useDispatch, useSelector } from "react-redux";
 import { removeItem, updateQuantity } from "./Redux/cartSlice/CartSlice";
+import { Link } from "react-router-dom";
 
 const CartPopup = () => {
   const dispatch = useDispatch();
@@ -87,9 +88,12 @@ const CartPopup = () => {
           <button className="uppercase bg-gray-600 w-full text-sm text-white py-2 rounded hover:bg-gray-500 transition-all duration-300 ease-in-out">
             Proceed to checkout
           </button>
-          <button className="uppercase bg-gray-400 w-full text-sm text-white py-2 rounded mt-4 hover:bg-gray-600 transition-all duration-300 ease-in-out">
+          <Link
+            to="/profile/orders"
+            className="uppercase d-block bg-gray-400 w-full text-sm text-white py-2 rounded mt-4 hover:bg-gray-600 transition-all duration-300 ease-in-out"
+          >
             View and edit cart
-          </button>
+          </Link>
         </>
       )}
     </div>

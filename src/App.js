@@ -11,6 +11,11 @@ import AboutUs from "./components/AboutUs";
 import ContactUs from "./components/ContactUs";
 import Register from "./components/Register";
 import Login from "./components/Login";
+import ProductDetails from "./components/ProductDetails";
+import WishList from "./components/WishList";
+import Profile from "./components/Profile";
+import Account from "./components/Account";
+import Cart from "./components/Cart";
 function App() {
   return (
     <Provider store={store}>
@@ -25,6 +30,12 @@ function App() {
             <Route path="/blogs" element={<Blogs />} />
             <Route path="/about" element={<AboutUs />} />
             <Route path="/contact" element={<ContactUs />} />
+            <Route path="/product/:id" element={<ProductDetails />} />
+            <Route path="/profile" element={<Profile />}>
+              <Route path="/profile/account" element={<Account />} />
+              <Route path="/profile/wishlist" element={<WishList />} />
+              <Route path="/profile/orders" element={<Cart />} />
+            </Route>
           </Routes>
         </PopupProvider>
       </ShopByCategoriesProvider>

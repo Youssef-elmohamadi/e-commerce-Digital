@@ -1,4 +1,5 @@
 import React, { useState, useContext } from "react";
+import { Link } from "react-router-dom";
 import { useInView } from "react-intersection-observer";
 import StarRatings from "react-star-ratings";
 import { BsFillStarFill } from "react-icons/bs";
@@ -13,8 +14,12 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import "./swiper.css";
 import { useDispatch } from "react-redux";
 import { addItem } from "./Redux/cartSlice/CartSlice";
+import { addItemToWishList } from "./Redux/wishListSlice/WishListSlice";
+import { addItemToCompare } from "./Redux/compareSlice/CompareSlice";
 import visiblePopupContext from "./CartPopupContext";
 import AddedToCartAlert from "./AddedToCartAlert";
+import AddedToWishListAlert from "./AddedToWishListAlert";
+import AddedToCompareAlert from "./AddedToCompareAlert";
 import ShopByCategoriesContext from "./ShopByCategoriesContext";
 const LazyImage = ({ src, alt, className }) => {
   const { ref, inView } = useInView({
@@ -22,7 +27,6 @@ const LazyImage = ({ src, alt, className }) => {
     triggerOnce: true,
   });
   const [isLoading, setIsLoading] = useState(true);
-
   const handleImageLoad = () => {
     setIsLoading(false);
   };
@@ -48,8 +52,16 @@ const LazyImage = ({ src, alt, className }) => {
   );
 };
 const TrendingProducts = () => {
-  const { showPopup, visible } = useContext(visiblePopupContext);
+  const {
+    showPopupCart,
+    showPopupWishlist,
+    showPopupCompare,
+    visibleCart,
+    visibleWishlist,
+    visibleCompare,
+  } = useContext(visiblePopupContext);
   const [showMore, setShowMore] = useState(false);
+  const [quantity, setQuantity] = useState(1);
   const handleShowMore = () => setShowMore(!showMore);
   console.log(showMore);
   const { productsApi } = useContext(ShopByCategoriesContext);
@@ -59,12 +71,22 @@ const TrendingProducts = () => {
   }
   const dispatch = useDispatch();
   const handleAddToCart = (product) => {
-    dispatch(addItem(product));
-    showPopup(product);
+    dispatch(addItem({ item: product, quantity: Number(quantity) }));
+    showPopupCart(product);
+  };
+  const handleAddToWishList = (product) => {
+    dispatch(addItemToWishList(product));
+    showPopupWishlist(product);
+  };
+  const handleAddToCompare = (product) => {
+    dispatch(addItemToCompare(product));
+    showPopupCompare(product);
   };
   return (
     <>
-      {visible && <AddedToCartAlert />}
+      {visibleCart && <AddedToCartAlert />}
+      {visibleWishlist && <AddedToWishListAlert />}
+      {visibleCompare && <AddedToCompareAlert />}
       <div className="flex items-center w-full my-8">
         <h2 className="lg:text-2xl text-base  m-0 font-bold">
           Trending Products
@@ -150,7 +172,12 @@ const TrendingProducts = () => {
                         />
                       </div>
                       <div className="flex flex-col mt-8">
-                        <h2 className="text-lg mb-2">{product.title}</h2>
+                        <Link
+                          to={`/product/${product.id}`}
+                          className="text-lg mb-2"
+                        >
+                          {product.title}
+                        </Link>
                         <div className="flex flex-col justify-between gap-2 py-3">
                           <span className="text-primary font-semibold">
                             ${product.price}
@@ -183,13 +210,19 @@ const TrendingProducts = () => {
                                 Add to cart
                               </p>
                             </div>
-                            <div className="group flex items-center gap-2 cursor-pointer border p-2 rounded transition-all duration-200 ease-linear hover:bg-primary">
+                            <div
+                              onClick={() => handleAddToCompare(product)}
+                              className="group flex items-center gap-2 cursor-pointer border p-2 rounded transition-all duration-200 ease-linear hover:bg-primary"
+                            >
                               <GrCompare
                                 size={20}
                                 className="text-gray-500 group-hover:text-white"
                               />
                             </div>
-                            <div className="group flex items-center gap-2 cursor-pointer border p-2 rounded transition-all duration-200 ease-linear hover:bg-primary">
+                            <div
+                              onClick={() => handleAddToWishList(product)}
+                              className="group flex items-center gap-2 cursor-pointer border p-2 rounded transition-all duration-200 ease-linear hover:bg-primary"
+                            >
                               <LuHeart
                                 size={20}
                                 className="text-gray-500 group-hover:text-white"

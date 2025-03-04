@@ -14,10 +14,15 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import "./swiper.css";
 import { useDispatch } from "react-redux";
 import { addItem } from "./Redux/cartSlice/CartSlice";
+import { addItemToCompare } from "./Redux/compareSlice/CompareSlice";
+import { addItemToWishList } from "./Redux/wishListSlice/WishListSlice";
 import QuickViewPopup from "./QuickViewPopup";
 import ShopByCategoriesContext from "./ShopByCategoriesContext";
 import visiblePopupContext from "./CartPopupContext";
 import AddedToCartAlert from "./AddedToCartAlert";
+import AddedToWishListAlert from "./AddedToWishListAlert";
+import AddedToCompareAlert from "./AddedToCompareAlert";
+import { Link } from "react-router-dom";
 const LazyImage = ({ src, alt, className }) => {
   const { ref, inView } = useInView({
     threshold: 0.1,
@@ -49,7 +54,14 @@ const LazyImage = ({ src, alt, className }) => {
   );
 };
 const NewArrivals = () => {
-  const { showPopup, visible } = useContext(visiblePopupContext);
+  const {
+    showPopupCart,
+    showPopupWishlist,
+    showPopupCompare,
+    visibleCart,
+    visibleWishlist,
+    visibleCompare,
+  } = useContext(visiblePopupContext);
   const [showMore, setShowMore] = useState(false);
   const handleShowMore = () => setShowMore(!showMore);
   const [quickViewProduct, setQuickViewProduct] = useState(null);
@@ -72,12 +84,24 @@ const NewArrivals = () => {
   const [quantity, setQuantity] = useState(1);
   const handleAddToCart = (product) => {
     dispatch(addItem({ item: product, quantity: Number(quantity) }));
-    showPopup(product);
+    showPopupCart(product);
+  };
+
+  const handleAddToWishList = (product) => {
+    dispatch(addItemToWishList(product));
+    showPopupWishlist(product);
+  };
+
+  const handleAddToCompare = (product) => {
+    dispatch(addItemToCompare(product));
+    showPopupCompare(product);
   };
 
   return (
     <>
-      {visible && <AddedToCartAlert />}
+      {visibleCart && <AddedToCartAlert />}
+      {visibleWishlist && <AddedToWishListAlert />}
+      {visibleCompare && <AddedToCompareAlert />}
       <div className="flex items-center w-full">
         <h2 className="lg:text-2xl text-base  m-0 font-bold">New Arrivals</h2>
         <div className="flex-1 h-[1px] mt-1 bg-gray-500 ml-4"></div>
@@ -162,7 +186,12 @@ const NewArrivals = () => {
                           className="w-full  !h-[250px]"
                         />
                       </div>
-                      <h2 className="text-lg mb-2">{product.title}</h2>
+                      <Link
+                        to={`/product/${product.id}`}
+                        className="text-lg mb-2"
+                      >
+                        {product.title}
+                      </Link>
                       <div className="flex justify-between items-center gap-2 border-t py-3">
                         <span className="text-primary font-semibold">
                           ${product.price}
@@ -196,7 +225,10 @@ const NewArrivals = () => {
                         </span>
                       </div>
 
-                      <div className="border rounded p-2 mb-1 relative group">
+                      <div
+                        onClick={() => handleAddToCompare(product)}
+                        className="border rounded p-2 mb-1 relative group"
+                      >
                         <GrCompare
                           className="text-gray-500 font-semibold group-hover:text-white  z-30 relative"
                           size={21}
@@ -205,7 +237,10 @@ const NewArrivals = () => {
                           Add To Compare
                         </span>
                       </div>
-                      <div className="border rounded p-2 mb-1 relative hover:bg-primary transition-all duration-700 ease-in-out group">
+                      <div
+                        onClick={() => handleAddToWishList(product)}
+                        className="border rounded p-2 mb-1 relative hover:bg-primary transition-all duration-700 ease-in-out group"
+                      >
                         <LuHeart
                           className="text-gray-500 font-semibold group-hover:text-white  z-30 relative"
                           size={21}

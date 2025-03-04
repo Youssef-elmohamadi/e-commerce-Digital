@@ -1,4 +1,5 @@
 import React, { useState, useContext } from "react";
+import { Link } from "react-router-dom";
 import StarRatings from "react-star-ratings";
 import { BsFillStarFill } from "react-icons/bs";
 import { TbStarHalfFilled } from "react-icons/tb";
@@ -18,6 +19,11 @@ import { useDispatch } from "react-redux";
 import { addItem } from "./Redux/cartSlice/CartSlice";
 import visiblePopupContext from "./CartPopupContext";
 import AddedToCartAlert from "./AddedToCartAlert";
+import AddedToWishListAlert from "./AddedToWishListAlert";
+import { addItemToWishList } from "./Redux/wishListSlice/WishListSlice";
+import { addItemToCompare } from "./Redux/compareSlice/CompareSlice";
+import AddedToCompareAlert from "./AddedToCompareAlert";
+
 const LazyImage = ({ src, alt, className }) => {
   const { ref, inView } = useInView({
     threshold: 0.1,
@@ -50,14 +56,32 @@ const LazyImage = ({ src, alt, className }) => {
 };
 
 const FeaturedProducts = () => {
-  const { showPopup, visible } = useContext(visiblePopupContext);
+  const {
+    showPopupCart,
+    showPopupWishlist,
+    showPopupCompare,
+    visibleCompare,
+    visibleCart,
+    visibleWishlist,
+  } = useContext(visiblePopupContext);
   const [showMore, setShowMore] = useState(false);
+  const [quantity, setQuantity] = useState(1);
   const handleShowMore = () => setShowMore(!showMore);
   const { productsApi } = useContext(ShopByCategoriesContext);
   const dispatch = useDispatch();
   const handleAddToCart = (product) => {
-    dispatch(addItem(product));
-    showPopup(product);
+    dispatch(addItem({ item: product, quantity: Number(quantity) }));
+    showPopupCart(product);
+  };
+
+  const handleAddToWishList = (product) => {
+    dispatch(addItemToWishList(product));
+    showPopupWishlist(product);
+  };
+
+  const handleAddToCompare = (product) => {
+    dispatch(addItemToCompare(product));
+    showPopupCompare(product);
   };
 
   const columns = [];
@@ -69,7 +93,6 @@ const FeaturedProducts = () => {
 
   const handleQuickView = (product) => {
     setQuickViewProduct(product);
-    console.log(product);
   };
 
   const handleCloseQuickView = () => {
@@ -78,7 +101,9 @@ const FeaturedProducts = () => {
 
   return (
     <>
-      {visible && <AddedToCartAlert />}
+      {visibleCart && <AddedToCartAlert />}
+      {visibleWishlist && <AddedToWishListAlert />}
+      {visibleCompare && <AddedToCompareAlert />}
       <div className="my-8">
         <div className="flex items-center w-full ">
           <h2 className="lg:text-2xl text-base m-0 font-bold">
@@ -148,7 +173,12 @@ const FeaturedProducts = () => {
                             className="w-full h-full object-cover"
                           />
                         </div>
-                        <h2 className="text-lg mb-2">{product.title}</h2>
+                        <Link
+                          to={`/product/${product.id}`}
+                          className="text-lg mb-2"
+                        >
+                          {product.title}
+                        </Link>
                         <div className="flex justify-between items-center gap-2 border-t py-3">
                           <span className="text-primary font-semibold">
                             ${product.price}
@@ -182,7 +212,10 @@ const FeaturedProducts = () => {
                           </span>
                         </div>
 
-                        <div className="border rounded p-2 mb-1 relative group">
+                        <div
+                          onClick={() => handleAddToCompare(product)}
+                          className="border rounded p-2 mb-1 relative group"
+                        >
                           <GrCompare
                             className="text-gray-500 font-semibold group-hover:text-white  z-30 relative"
                             size={21}
@@ -191,7 +224,10 @@ const FeaturedProducts = () => {
                             Add To Compare
                           </span>
                         </div>
-                        <div className="border rounded p-2 mb-1 relative hover:bg-primary transition-all duration-700 ease-in-out group">
+                        <div
+                          onClick={() => handleAddToWishList(product)}
+                          className="border rounded p-2 mb-1 relative hover:bg-primary transition-all duration-700 ease-in-out group"
+                        >
                           <LuHeart
                             className="text-gray-500 font-semibold group-hover:text-white  z-30 relative"
                             size={21}

@@ -7,12 +7,16 @@ const Login = () => {
   const navigate = useNavigate();
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-
+  const [showPassword, setShowPassword] = useState(false);
+  const [error, setError] = useState("");
   const handleSubmit = async (e) => {
     e.preventDefault();
-    await signInWithEmailAndPassword(auth, email, password);
-    navigate("/");
-    console.log(email, password);
+    try {
+      await signInWithEmailAndPassword(auth, email, password);
+      navigate("/");
+    } catch (error) {
+      setError(error.message);
+    }
   };
   return (
     <>
@@ -29,6 +33,9 @@ const Login = () => {
           </p>
           <form onSubmit={handleSubmit}>
             <div className="my-6 flex flex-wrap gap-4 items-center md:justify-center ">
+              {error && (
+                <p className="text-red-500 w-full text-center">{error}</p>
+              )}
               <label className="md:min-w-[200px] flex items-center md:justify-end font-semibold text-gray-600">
                 Email
               </label>
@@ -47,11 +54,15 @@ const Login = () => {
                 value={password}
                 onChange={(e) => setPassword(e.target.value)}
                 className="w-full md:w-5/12 border"
-                type="password"
+                type={showPassword ? "text" : "password"}
               />
             </div>
             <div className="my-6 flex flex-wrap gap-4 items-center md:ml-[40%] ">
-              <input type="checkbox" id="show-password" />
+              <input
+                onChange={(e) => setShowPassword(e.target.checked)}
+                type="checkbox"
+                id="show-password"
+              />
               <label htmlFor="show-password">Show Password</label>
             </div>
             <div className="my-6 flex flex-wrap gap-4 items-center md:ml-[41%] ">

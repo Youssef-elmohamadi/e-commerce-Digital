@@ -1,5 +1,5 @@
 import React, { useState, useContext } from "react";
-import { useLocation } from "react-router-dom";
+import { useLocation, Link } from "react-router-dom";
 import ShopByCategoriesContext from "./ShopByCategoriesContext";
 import { IoCartOutline } from "react-icons/io5";
 import { GrCompare } from "react-icons/gr";
@@ -13,8 +13,12 @@ import { MdOutlineStarBorder } from "react-icons/md";
 import { useDispatch } from "react-redux";
 import QuickViewPopup from "./QuickViewPopup";
 import { addItem } from "./Redux/cartSlice/CartSlice";
-import visiblePopupContext from "./CartPopupContext";
 import { addItemToCompare } from "./Redux/compareSlice/CompareSlice";
+import { addItemToWishList } from "./Redux/wishListSlice/WishListSlice";
+import visiblePopupContext from "./CartPopupContext";
+import AddedToCartAlert from "./AddedToCartAlert";
+import AddedToWishListAlert from "./AddedToWishListAlert";
+import AddedToCompareAlert from "./AddedToCompareAlert";
 
 const LazyImage = ({ src, alt, className }) => {
   const { ref, inView } = useInView({
@@ -53,7 +57,15 @@ const ShopProducts = () => {
   const queryParams = new URLSearchParams(location.search);
   const searchQuery = queryParams.get("search") || "";
   const categoryFilter = queryParams.get("category") || "";
-  const { showPopup } = useContext(visiblePopupContext);
+  const {
+    showPopupCart,
+    showPopupWishlist,
+    showPopupCompare,
+    visibleCart,
+    visibleWishlist,
+    visibleCompare,
+  } = useContext(visiblePopupContext);
+  const [quantity, setQuantity] = useState(1);
   const dispatch = useDispatch();
   const filteredProducts = productsApi.filter((product) => {
     const matchesSearch = searchQuery
@@ -67,11 +79,17 @@ const ShopProducts = () => {
   });
 
   const handleAddToCart = (product) => {
-    dispatch(addItem(product));
-    showPopup(product);
+    dispatch(addItem({ item: product, quantity: Number(quantity) }));
+    showPopupCart(product);
   };
   const handleAddToCompare = (product) => {
     dispatch(addItemToCompare(product));
+    showPopupCompare(product);
+  };
+
+  const handleAddToWishList = (product) => {
+    dispatch(addItemToWishList(product));
+    showPopupWishlist(product);
   };
 
   const handleQuickView = (product) => {
@@ -84,6 +102,9 @@ const ShopProducts = () => {
   };
   return (
     <>
+      {visibleCart && <AddedToCartAlert />}
+      {visibleWishlist && <AddedToWishListAlert />}
+      {visibleCompare && <AddedToCompareAlert />}
       <div className="md:w-3/6 lg:w-4/6 flex-grow w-full">
         <div className="flex items-center w-full my-6">
           <h2 className="lg:text-2xl text-base m-0 font-bold">Shopping Now</h2>
@@ -103,9 +124,12 @@ const ShopProducts = () => {
                       className="w-full h-[300px] object-cover"
                     />
                   </div>
-                  <h2 className="text-sm font-semibold mb-2 text-black">
+                  <Link
+                    to={`/product/${product.id}`}
+                    className="text-sm font-semibold mb-2 text-black"
+                  >
                     {product.title}
-                  </h2>
+                  </Link>
                   <div className="flex justify-between items-center gap-2 border-t py-3">
                     <span className="text-primary font-semibold">
                       ${product.price}
@@ -150,7 +174,10 @@ const ShopProducts = () => {
                         Add To Compare
                       </span>
                     </div>
-                    <div className="border rounded p-2 mb-1 relative hover:bg-primary transition-all duration-700 ease-in-out group">
+                    <div
+                      onClick={() => handleAddToWishList(product)}
+                      className="border rounded p-2 mb-1 relative hover:bg-primary transition-all duration-700 ease-in-out group"
+                    >
                       <LuHeart
                         className="text-gray-500 font-semibold group-hover:text-white  z-30 relative"
                         size={21}
@@ -233,7 +260,10 @@ const ShopProducts = () => {
                         Add To Compare
                       </span>
                     </div>
-                    <div className="border rounded p-2 mb-1 relative hover:bg-primary transition-all duration-700 ease-in-out group">
+                    <div
+                      onClick={() => handleAddToWishList(product)}
+                      className="border rounded p-2 mb-1 relative hover:bg-primary transition-all duration-700 ease-in-out group"
+                    >
                       <LuHeart
                         className="text-gray-500 font-semibold group-hover:text-white  z-30 relative"
                         size={21}

@@ -1,5 +1,5 @@
 import React, { useState, useContext, useEffect } from "react";
-import { useNavigate, Link } from "react-router-dom";
+import { useNavigate, Link, Links } from "react-router-dom";
 import ShopByCategoriesContext from "./ShopByCategoriesContext";
 import logo from "../images/logo.svg";
 import { FaSearch } from "react-icons/fa";
@@ -14,9 +14,11 @@ const Header = () => {
   const navigate = useNavigate();
   const totalPrice = useSelector((state) => state.cart.totalPrice);
   const totalQuantity = useSelector((state) => state.cart.totalQuantity);
+  const wishlistQuantity = useSelector((state) => state.wishList.items.length);
   const [searchTerm, setSearchTerm] = useState("");
   const [selectedCategory, setSelectedCategory] = useState("");
   const { categoriesApi: categories } = useContext(ShopByCategoriesContext);
+
   const handleSubmit = (e) => {
     e.preventDefault();
     navigate(
@@ -131,7 +133,25 @@ const Header = () => {
                   </Link>
                   <div className="absolute hidden group-hover/account:block z-50 top-14 p-2 rounded right-0 bg-white  w-40 h-40">
                     <ul>
-                      <li className="text-sm py-2 hover:text-primary cursor-pointer" onClick={logoutUser}>sign out</li>
+                      <Link
+                        to="/profile/orders"
+                        className="text-sm py-2 hover:text-primary cursor-pointer"
+                      >
+                        Orders
+                      </Link>
+                      <br />
+                      <Link
+                        to="/profile/wishlist"
+                        className="text-sm py-2 hover:text-primary cursor-pointer"
+                      >
+                        Wishlist
+                      </Link>
+                      <li
+                        className="text-sm py-2 hover:text-primary cursor-pointer"
+                        onClick={logoutUser}
+                      >
+                        sign out
+                      </li>
                     </ul>
                   </div>
                 </div>
@@ -159,9 +179,11 @@ const Header = () => {
             <div className=" items-center hidden xl:flex gap-2 relative py-4">
               <CiHeart size={28} className="mx-2 text-slate-50" />
               <div className="w-5 h-5 bg-primary rounded-full text-white absolute text-sm top-1  right-[90px] flex items-center justify-center">
-                0
+                {wishlistQuantity}
               </div>
-              <p className="text-sm text-slate-50 uppercase">My Wishlist</p>
+              <p className="text-sm text-slate-50 uppercase">
+                <Link to="/profile/wishlist">Wishlist</Link>-
+              </p>
             </div>
             <div className="flex items-center gap-2 relative  group/cart py-4 ">
               <IoCartOutline size={28} className="mx-2 text-slate-50" />

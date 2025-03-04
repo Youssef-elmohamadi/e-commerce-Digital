@@ -4,7 +4,6 @@ import { createUserWithEmailAndPassword } from "firebase/auth";
 import { doc, setDoc } from "firebase/firestore";
 import { useNavigate } from "react-router-dom";
 
-/******  07428a13-9116-47b1-9620-9216cf9f2be1  *******/
 const Register = () => {
   const [firstName, setFirstName] = useState("");
   const [lastName, setLastName] = useState("");
@@ -14,6 +13,7 @@ const Register = () => {
   const [error, setError] = useState("");
   const [strength, setStrength] = useState(0);
   const navigate = useNavigate();
+  const [showPassword, setShowPassword] = useState(false);
   const checkPasswordStrength = (pwd) => {
     let strengthValue = 0;
     if (pwd.length > 8) strengthValue++;
@@ -39,6 +39,7 @@ const Register = () => {
   const registerUser = async (email, password, firstName, lastName, error) => {
     try {
       // إنشاء المستخدم في Authentication
+
       const userCredential = await createUserWithEmailAndPassword(
         auth,
         email,
@@ -53,10 +54,9 @@ const Register = () => {
         email,
         createdAt: new Date(),
       });
-
+      navigate("/");
       return user;
     } catch (error) {
-      console.error("خطأ في تسجيل الحساب:", error.message);
       throw error;
     }
   };
@@ -69,7 +69,11 @@ const Register = () => {
       return;
     }
 
-    await registerUser(email, password, firstName, lastName);
+    try {
+      await registerUser(email, password, firstName, lastName);
+    } catch (error) {
+      setError(error.message);
+    }
   };
   return (
     <>
@@ -89,7 +93,7 @@ const Register = () => {
               <input
                 onChange={(e) => setFirstName(e.target.value)}
                 value={firstName}
-                className="w-full md:w-5/12 border"
+                className="w-full md:w-5/12 border px-1 py-1"
                 type="text"
               />
             </div>
@@ -100,13 +104,18 @@ const Register = () => {
               <input
                 onChange={(e) => setLastName(e.target.value)}
                 value={lastName}
-                className="w-full md:w-5/12 border"
+                className="w-full md:w-5/12 border px-1 py-1"
                 type="text"
               />
             </div>
             <legend className="md:ml-[40%] text-gray-600">
               SignIn Information
             </legend>
+            {error && (
+              <p className="text-red-500 w-full md:w-5/12  md:ml-[40%]">
+                {error}
+              </p>
+            )}
             <div className="my-6 flex flex-wrap gap-4 items-center md:justify-center ">
               <label className="md:min-w-[200px] flex items-center md:justify-end font-semibold text-gray-600">
                 Email
@@ -114,7 +123,7 @@ const Register = () => {
               <input
                 onChange={(e) => setEmail(e.target.value)}
                 value={email}
-                className="w-full md:w-5/12 border"
+                className="w-full md:w-5/12 border px-1 py-1"
                 type="email"
               />
             </div>
@@ -125,8 +134,8 @@ const Register = () => {
               <input
                 value={password}
                 onChange={handleChange}
-                className="w-full md:w-5/12 border"
-                type="password"
+                className="w-full md:w-5/12 border px-1 py-1"
+                type={showPassword ? "text" : "password"}
               />
             </div>
             <div className="my-6 flex flex-wrap gap-4 items-center md:justify-center ">
@@ -136,8 +145,8 @@ const Register = () => {
               <input
                 onChange={(e) => setConfirmPassword(e.target.value)}
                 value={confirmPassword}
-                className="w-full md:w-5/12 border"
-                type="password"
+                className="w-full md:w-5/12 border px-1 py-1"
+                type={showPassword ? "text" : "password"}
               />
               {password.length > 0 && (
                 <div className="w-full md:ml-[218px] -mt-4 ml-0 my-2 md:w-5/12 h-10 rounded-sm">
@@ -161,7 +170,11 @@ const Register = () => {
               )}
             </div>
             <div className="my-6 flex flex-wrap gap-4 items-center md:ml-[40%] ">
-              <input type="checkbox" id="show-password" />
+              <input
+                onChange={(e) => setShowPassword(e.target.checked)}
+                type="checkbox"
+                id="show-password"
+              />
               <label htmlFor="show-password">Show Password</label>
             </div>
             <div className="my-6 flex flex-wrap gap-4 items-center md:ml-[41%] ">

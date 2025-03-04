@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import ShopByCategoriesContext from './ShopByCategoriesContext'
 import { useInView } from "react-intersection-observer";
+import { Link } from 'react-router-dom';
 const LazyImage = ({ src, alt, className }) => {
   const { ref, inView } = useInView({
     threshold: 0.1, 
@@ -55,7 +56,7 @@ const Bestsellers = () => {
                     />
                   </div>
                   <div className="w-3/4 flex flex-col py-2 gap-2">
-                    <h3 className="font-semibold">{product.title}</h3>
+                    <Link to={`/product/${product.id}`} className="font-semibold">{product.title}</Link>
                     <div className="text-primary font-semibold">
                       ${product.price}
                     </div>

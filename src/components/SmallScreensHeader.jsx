@@ -15,6 +15,8 @@ import { MdOutlineKeyboardArrowUp } from "react-icons/md";
 import { MdOutlineKeyboardArrowDown } from "react-icons/md";
 import CartPopup from "./CartPopup";
 import { useSelector } from "react-redux";
+import { onAuthStateChanged, signOut } from "firebase/auth";
+import { auth } from "../FirebaseConfig";
 const SmallScreensHeader = () => {
   const [searchTerm, setSearchTerm] = useState("");
   const [showSideBar, setShowSideBar] = useState(false);
@@ -26,6 +28,7 @@ const SmallScreensHeader = () => {
   );
   const navigate = useNavigate();
   const [showCart, setShowCart] = useState(false);
+  const [isLoggedIn, setIsLoggedIn] = useState(false);
 
   const toggleCart = () => {
     setShowCart((prev) => !prev);
@@ -74,6 +77,20 @@ const SmallScreensHeader = () => {
     e.preventDefault();
     navigate(`/shop?search=${encodeURIComponent(searchTerm)}`);
   };
+  useEffect(() => {
+    // مراقبة حالة تسجيل الدخول
+    const unsubscribe = onAuthStateChanged(auth, (currentUser) => {
+      setIsLoggedIn(!!currentUser); // إذا كان هناك مستخدم: true، وإلا: false
+    });
+  }, []);
+  const logoutUser = async () => {
+    try {
+      await signOut(auth);
+      console.log("تم تسجيل الخروج بنجاح!");
+    } catch (error) {
+      console.error("خطأ في تسجيل الخروج:", error.message);
+    }
+  };
 
   return (
     <>
@@ -87,7 +104,9 @@ const SmallScreensHeader = () => {
           <HiBars3 className="text-2xl text-white" size={35} />
         </button>
         <div>
-          <img src={logo} alt="Logo" width={120} />
+          <Link to="/">
+            <img src={logo} alt="logo" className="w-28" />
+          </Link>
         </div>
         <div className="flex items-center gap-2 relative">
           <FiShoppingBag
@@ -116,7 +135,7 @@ const SmallScreensHeader = () => {
         />
         <button
           type="submit"
-          className="absolute right-2 top-1/2 transform -translate-y-1/2"
+          className="absolute right-5 top-1/2 transform -translate-y-1/2"
         >
           <FaSearch size={20} />
         </button>
@@ -367,20 +386,42 @@ const SmallScreensHeader = () => {
             <>
               <div>
                 <ul>
-                  <li className="py-1">
-                    <Link
-                      to="/login"
-                      className="hover:text-primary py-1   text-sm flex items-center uppercase"
-                    >
-                      Login
-                    </Link>
-                    <Link
-                      to="/register"
-                      className="hover:text-primary py-1 text-sm flex items-center uppercase"
-                    >
-                      Register
-                    </Link>
-                  </li>
+                  {isLoggedIn ? (
+                    <>
+                      <li className="py-1">
+                        <Link
+                          to="/profile"
+                          className="text-sm text-black uppercase hover:text-primary
+                                        "
+                        >
+                          My Account
+                        </Link>
+                      </li>
+                      <li
+                        className="text-sm py-2 hover:text-primary cursor-pointer"
+                        onClick={logoutUser}
+                      >
+                        Sign Out
+                      </li>
+                    </>
+                  ) : (
+                    <>
+                      <li className="py-1">
+                        <Link
+                          to="/login"
+                          className="hover:text-primary py-1   text-sm flex items-center uppercase"
+                        >
+                          Login
+                        </Link>
+                        <Link
+                          to="/register"
+                          className="hover:text-primary py-1 text-sm flex items-center uppercase"
+                        >
+                          Register
+                        </Link>
+                      </li>
+                    </>
+                  )}
                 </ul>
               </div>
             </>
